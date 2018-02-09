@@ -1,0 +1,23 @@
+
+.location {
+    position: relative;
+    top: 6px;
+    left: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+.navbar {
+    text-align: center;
+    font-size: 25px;
+    vertical-align: middle;
+    margin-top:20px;
+
+}
+
+.glyphicon-user {
+    margin-right: 15px;
+    color: black
+}
+
+.glyphicon-menu-hamburger {
+    color: black
+}

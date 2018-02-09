@@ -1,0 +1,6 @@
+.circle-avatar {
+    position: relative;
+    height: 90%;
+    margin-left: 5px;
+    border-radius:50%;
+}
