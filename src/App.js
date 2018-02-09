@@ -5,6 +5,7 @@ import Logo from "./components/Logo";
 import "./App.css";
 
 
+
 class App extends Component {
   render() {
     return ( 
@@ -26,6 +27,7 @@ class App extends Component {
             pdf="true"
             audiofile="true"
             javascript="true"
+            image="https://orig00.deviantart.net/bac7/f/2014/041/9/a/profile_picture_by_i_am_a_random_person-d75xov8.jpg"
             />
             <br/>
             <UserBanner
@@ -90,6 +92,7 @@ class App extends Component {
             <UserBanner
             userName="Bill Gates"
             radius="0.9 Miles Away"
+            facebook="true"
             />
           </div>
         </div>

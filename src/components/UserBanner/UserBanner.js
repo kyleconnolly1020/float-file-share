@@ -55,7 +55,7 @@ class UserBanner extends React.Component {
     render(props) {
         return (
             <div className="container userBanner"> 
-                <UserProfile/>
+                <UserProfile image={this.props.image ? this.props.image : "http://www.skywardimaging.com/wp-content/uploads/2015/11/default-user-image.png"}/>
                 <div className="userName">
                     {this.props.userName}
                 </div>
