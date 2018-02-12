@@ -1,0 +1,55 @@
+.facebookIcon {
+  position: relative;
+  bottom: 100px;
+  font-size: 26px;
+  margin-left: 50%;
+}
+
+.twitterIcon {
+  position: relative;
+  bottom: 137px;
+  font-size: 26px;
+  margin-left: 55%;
+}
+
+.snapchatIcon {
+  position: relative;
+  bottom: 174px;
+  font-size: 26px;
+  margin-left: 60%;
+}
+
+.linkedinIcon {
+  position: relative;
+  bottom: 211px;
+  font-size: 26px;
+  margin-left: 65%;
+}
+
+.instagramIcon {
+  position: relative;
+  bottom: 248px;
+  font-size: 26px;
+  margin-left: 70%;
+}
+
+.pdfIcon {
+  position: relative;
+  bottom: 285px;
+  font-size: 26px;
+  margin-left: 75%;
+}
+
+.audiofileIcon {
+  position: relative;
+  bottom: 322px;
+  font-size: 26px;
+  margin-left: 80%;
+}
+
+.javascriptIcon { 
+  position: relative;
+  bottom: 359px;
+  font-size: 26px;
+  margin-left: 85%;
+}
