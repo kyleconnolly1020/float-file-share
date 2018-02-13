@@ -48,22 +48,9 @@ class SocialMediaBar extends React.Component {
     }
 
     render (props) {
-        console.log(this.state.icons)
         this.renderIcons();
-        console.log(this.state.rendering)
         return (
         <div>
-            {
-            // this.state.rendering.map(render => {return ReactHtmlParser(render)})
-            /* <span className='icon1'>{this.facebookIcon(props)}</span>
-            <span className='icon2'>{this.twitterIcon(props)}</span>
-            <span className='icon3'>{this.snapchatIcon(props)}</span>
-            <span className='icon4'>{this.linkedinIcon(props)}</span>
-            <span className='icon5'>{this.instagramIcon(props)}</span>
-            <span className='icon6'>{this.pdfIcon(props)}</span>
-            <span className='icon7'>{this.audiofileIcon(props)}</span>
-            <span className='icon8'>{this.javascriptIcon(props)}</span> */}
-
             {this.state.rendering.map(render => {
                 console.log(render);
                 return <span className={render.iconNum}>{render.icon}</span>
