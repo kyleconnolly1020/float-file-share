@@ -11,11 +11,13 @@ class NavBar extends React.Component {
                     <span className="glyphicon glyphicon-menu-hamburger"></span>
                 </a>
                 <span className="location">{this.props.location}</span>
-                <Link to='/profile'>
-                    <span className="navbar-brand navbar-right">
+
+                <span className="navbar-brand navbar-right">
+                    <Link to='/profile'>
                         <span className="glyphicon glyphicon-user"></span>
-                    </span>
-                </Link>
+                    </Link>
+                </span>
+
             </nav>
         );
     }
