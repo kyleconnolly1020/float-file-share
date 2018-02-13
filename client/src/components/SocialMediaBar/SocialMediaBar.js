@@ -6,7 +6,12 @@ class SocialMediaBar extends React.Component {
         icons : this.props,
         rendering : []
     }
-    iconDetection (icon) {
+
+    componentWillMount() {
+        this.renderIcons()
+    }
+
+    iconDetection = (icon) => {
         switch (icon) {
             case "facebook":
             return <i className='fab fa-facebook-square'></i>;
@@ -37,23 +42,22 @@ class SocialMediaBar extends React.Component {
         }
     }
 
-    renderIcons() {
+    renderIcons = () => {
         let i = 1;
         for(var icon in this.state.icons){
             if (this.state.icons[icon] === "true") {
-                this.state.rendering.push({icon: this.iconDetection(icon), iconNum:'icon' + i});
+                this.state.rendering.push({icon: this.iconDetection(icon), iconNum:'icon' + i, key: i + 10});
                 i++;
             }
         }
     }
 
-    render (props) {
-        this.renderIcons();
+    render () {
         return (
         <div>
             {this.state.rendering.map(render => {
                 console.log(render);
-                return <span className={render.iconNum}>{render.icon}</span>
+                return <span className={render.iconNum} key={render.key}>{render.icon}</span>
             })}
         </div>
         )
