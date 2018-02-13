@@ -23,7 +23,7 @@ class UserBanner extends React.Component {
                         linkedin={this.props.linkedin}
                         instagram={this.props.instagram}
                         pdf={this.props.pdf}
-                        audio={this.props.audio}
+                        audiofile={this.props.audiofile}
                         javascript={this.props.javascript}
                     />
                     </div>
