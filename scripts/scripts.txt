@@ -1,0 +1,7 @@
+cd ~/scripts
+
+node seedDB.js
+
+db.users.find({ location: { $geoWithin: { $centerSphere: [ [-73.856077, 40.848447], 10 / 3963.2 ] } } }).pretty()
+
+**Still need 2dsphere index in models
