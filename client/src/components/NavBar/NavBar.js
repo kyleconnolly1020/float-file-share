@@ -1,15 +1,15 @@
 import React from "react";
 import "./NavBar.css";
-
+import Search from "../Search";
 import { Link } from "react-router-dom";
+import Menu from "../Menu";
 
 class NavBar extends React.Component {
     render(props) {
         return (
             <nav className="navbar navbar-default">
-                <a className="navbar-brand">
-                    <span className="glyphicon glyphicon-menu-hamburger"></span>
-                </a>
+                <Menu/>
+                <Search/>
                 <span className="location">{this.props.location}</span>
 
                 <span className="navbar-brand navbar-right">
