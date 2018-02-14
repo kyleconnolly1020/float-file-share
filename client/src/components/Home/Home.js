@@ -26,11 +26,13 @@ class Home extends React.Component {
                                     snapchat={user.socialProfiles.snapchat ? "true" : null}
                                     linkedin={user.socialProfiles.linkedin ? "true" : null}
                                     instagram={user.socialProfiles.instagram ? "true" : null}
-                                    pdf = {user.files ? (user.files.pdf ? "true" : null) : null}
-                                    audiofile = {user.files ? (user.files.audiofile ? "true" : null) : null}
-                                    javascript = {user.files ? (user.files.javascript ? "true" : null) : null}
+                                    pdf = {user.files.pdf ? "true"  : null}
+                                    audiofile = {user.files.audiofile ? "true"  : null}
+                                    javascript = {user.files.javascript ? "true"  : null}
+                                    description = {user.description ? user.description : null}
                                     userSocials={user.socialProfiles}
                                     userFiles={user.files}
+                                    image={user.image}
                                 />
                             )
                         })}
