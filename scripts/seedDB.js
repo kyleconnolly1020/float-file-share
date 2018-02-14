@@ -36,6 +36,10 @@ const userSeed = [
       facebook: "facebook.com/ben",
       instagram: "benharloe"
     },
+    files: {
+      pdf: "pdf_url",
+      audiofile: "audio_url"
+    },
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
   },

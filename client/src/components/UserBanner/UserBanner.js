@@ -29,10 +29,14 @@ class UserBanner extends React.Component {
                     </div>
                     <Panel.Collapse>
                         <Panel.Body>
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life
-                            accusamus terry richardson ad squid. Nihil anim keffiyeh
-                            helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                            ea proident.
+                            <div className="row">
+                                <div className="col-md-6">
+                                    Social Media:
+                                </div>
+                                <div className="col-md-6">
+                                    Files:
+                                </div>
+                            </div>
                         </Panel.Body>
                     </Panel.Collapse>
                 </Panel>
