@@ -13,6 +13,7 @@
       "pdf": "pdf_url",
       "audiofile": "audio_url"
     },
+    "image" : "https://image.flaticon.com/icons/svg/145/145867.svg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
   },
   {
@@ -28,6 +29,7 @@
     "files": {
       "audiofile": "audio_url"
     },
+    "image": "https://image.flaticon.com/icons/svg/163/163837.svg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
   },
   {
@@ -42,6 +44,7 @@
     "files": {
       "javascript": "javascript_url"
     },
+    "image": "https://image.flaticon.com/icons/svg/163/163814.svg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
   },
   {
@@ -58,6 +61,7 @@
     "files": {
       "javascript": "javascript_url"
     },
+    "image": "https://image.flaticon.com/icons/svg/163/163804.svg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
   },
   {
@@ -76,6 +80,7 @@
       "audiofile": "audio_url",
       "javascript": "javascript_url"
     },
+    "image": "https://image.flaticon.com/icons/svg/163/163801.svg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
   },
   {
@@ -92,6 +97,7 @@
       "pdf": "pdf_url",
       "javascript": "javascript_url"
     },
+    "image": "https://image.flaticon.com/icons/svg/163/163827.svg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
   },
   {
@@ -108,6 +114,7 @@
       "pdf": "pdf_url",
       "audiofile": "audio_url"
     },
+    "image": "https://image.flaticon.com/icons/svg/145/145859.svg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
   },
   {
@@ -124,6 +131,7 @@
       "snapchat": "johnd",
       "linkedin": "johnd"
     },
+    "image": "https://image.flaticon.com/icons/svg/163/163834.svg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
   }
 ]
