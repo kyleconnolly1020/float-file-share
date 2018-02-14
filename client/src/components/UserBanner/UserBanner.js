@@ -36,6 +36,7 @@ class UserBanner extends React.Component {
                         <Panel.Body>
                             <div className="row">
                                 <div className="col-md-6">
+                                    {<p>{this.props.description}</p>}
                                     <p>Social Media:</p>
                                     {this.props.userSocials.facebook ? (<p>{'Facebook: '+ this.props.userSocials.facebook} </p>) : null}
                                     {this.props.userSocials.twitter ? (<p>{'Twitter: ' + this.props.userSocials.twitter}</p>) : null}
