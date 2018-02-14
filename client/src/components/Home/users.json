@@ -55,6 +55,9 @@
       "snapchat": "kevinsemo",
       "linkedin": "kevinsemo"
     },
+    "files": {
+      "javascript": "javascript_url"
+    },
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
   },
   {
@@ -65,7 +68,8 @@
     ],
     "socialProfiles": {
       "snapchat": "clark",
-      "linkedin": "clarkphan"
+      "linkedin": "clarkphan",
+      "twitter": "twitter.com/clarkphan"
     },
     "files": {
       "pdf": "pdf_url",
@@ -84,6 +88,10 @@
       "snapchat": "Travis",
       "linkedin": "Travis"
     },
+    "files": {
+      "pdf": "pdf_url",
+      "javascript": "javascript_url"
+    },
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
   },
   {
@@ -96,6 +104,10 @@
       "snapchat": "David",
       "linkedin": "David"
     },
+    "files": {
+      "pdf": "pdf_url",
+      "audiofile": "audio_url"
+    },
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
   },
   {
@@ -104,6 +116,10 @@
       -74.00528899999999,
       40.628886
     ],
+    "files": {
+      "audiofile": "audio_url",
+      "javascript": "javascript_url"
+    },
     "socialProfiles": {
       "snapchat": "johnd",
       "linkedin": "johnd"

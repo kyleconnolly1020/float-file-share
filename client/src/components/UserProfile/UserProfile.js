@@ -5,7 +5,7 @@ class UserProfile extends React.Component {
     
     render(props){
         return(
-            <img className="circle-avatar" alt="profPic" src={this.props.image}/>
+            <img className="circle-avatar" alt="profPic" src={this.props.image} onClick={this.props.action}/>
         )
     }
 }

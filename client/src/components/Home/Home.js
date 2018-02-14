@@ -29,6 +29,8 @@ class Home extends React.Component {
                                     pdf = {user.files ? (user.files.pdf ? "true" : null) : null}
                                     audiofile = {user.files ? (user.files.audiofile ? "true" : null) : null}
                                     javascript = {user.files ? (user.files.javascript ? "true" : null) : null}
+                                    userSocials={user.socialProfiles}
+                                    userFiles={user.files}
                                 />
                             )
                         })}
