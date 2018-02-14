@@ -1,0 +1,113 @@
+[
+  {
+    "username": "bharloe",
+    "location": [
+      -73.856077,
+      40.848447
+    ],
+    "socialProfiles": {
+      "facebook": "facebook.com/ben",
+      "instagram": "benharloe"
+    },
+    "files": {
+      "pdf": "pdf_url",
+      "audiofile": "audio_url"
+    },
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
+  },
+  {
+    "username": "kyleconnolly",
+    "location": [
+      -73.961704,
+      40.662942
+    ],
+    "socialProfiles": {
+      "facebook": "facebook.com/kyle",
+      "instagram": "kyle"
+    },
+    "files": {
+      "audiofile": "audio_url"
+    },
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
+  },
+  {
+    "username": "johnm",
+    "location": [
+      -73.98241999999999,
+      40.579505
+    ],
+    "socialProfiles": {
+      "facebook": "facebook.com/john"
+    },
+    "files": {
+      "javascript": "javascript_url"
+    },
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
+  },
+  {
+    "username": "kevin",
+    "location": [
+      -73.8601152,
+      40.7311739
+    ],
+    "socialProfiles": {
+      "facebook": "facebook.com/ben",
+      "snapchat": "kevinsemo",
+      "linkedin": "kevinsemo"
+    },
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
+  },
+  {
+    "username": "Clark",
+    "location": [
+      -73.8803827,
+      40.7643124
+    ],
+    "socialProfiles": {
+      "snapchat": "clark",
+      "linkedin": "clarkphan"
+    },
+    "files": {
+      "pdf": "pdf_url",
+      "audiofile": "audio_url",
+      "javascript": "javascript_url"
+    },
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
+  },
+  {
+    "username": "TheTravMan",
+    "location": [
+      -73.98513559999999,
+      40.7676919
+    ],
+    "socialProfiles": {
+      "snapchat": "Travis",
+      "linkedin": "Travis"
+    },
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
+  },
+  {
+    "username": "David",
+    "location": [
+      -73.9068506,
+      40.6199034
+    ],
+    "socialProfiles": {
+      "snapchat": "David",
+      "linkedin": "David"
+    },
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
+  },
+  {
+    "username": "johnd",
+    "location": [
+      -74.00528899999999,
+      40.628886
+    ],
+    "socialProfiles": {
+      "snapchat": "johnd",
+      "linkedin": "johnd"
+    },
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
+  }
+]
