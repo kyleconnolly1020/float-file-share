@@ -7,8 +7,16 @@ var UserSchema = new Schema({
     type: String,
     unique: true
   },
-  location: [Number, Number],
-
+  location: {
+    type: {
+      type: String,
+      default: 'Point'
+    },
+    coordinates: {
+      type: [Number],
+      default: [0, 0]
+    }
+  },
   socialProfiles: {
     type: Schema.Types.Mixed
   },
@@ -22,6 +30,8 @@ var UserSchema = new Schema({
     }
   ]
 });
+
+UserSchema.index({ location: '2dsphere' });
 
 var User = mongoose.model("User", UserSchema);
 
