@@ -9,6 +9,12 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+
+  searchUsername: function (req, res) {
+    db.User
+      .find({ username: req.params.username })
+      .then(data => res.json(data))
+  },
   
   findNear: function (req, res) {
     db.User.find({
