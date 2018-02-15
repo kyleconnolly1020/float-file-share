@@ -1,0 +1,46 @@
+.bm-burger-button {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    left: 160px;
+    top: 132px;
+  }
+
+  /* Color/shape of burger icon bars */
+.bm-burger-bars {
+    background: #373a47;
+  }
+
+.bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  width: 150px;
+  margin-right: 800px;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.bm-menu-wrap {
+    width: 150px !important;
+}
+
+.menu-item {
+    font-family: 'Raleway', sans-serif;
+    padding-top: 20px;
+}

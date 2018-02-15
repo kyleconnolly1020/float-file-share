@@ -7,21 +7,28 @@ var UserSchema = new Schema({
     type: String,
     unique: true
   },
-  location: [Number, Number],
-
+  location: {
+    type: {
+      type: String,
+      default: 'Point'
+    },
+    coordinates: {
+      type: [Number],
+      default: [0, 0]
+    }
+  },
   socialProfiles: {
     type: Schema.Types.Mixed
   },
   description: {
     type: String
   },
-  files: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "File"
-    }
-  ]
+  savedFiles: {
+    type: Schema.Types.Mixed
+  }
 });
+
+UserSchema.index({ location: '2dsphere' });
 
 var User = mongoose.model("User", UserSchema);
 
