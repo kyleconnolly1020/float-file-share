@@ -1,10 +1,10 @@
 [
   {
     "username": "bharloe",
-    "location": [
-      -73.856077,
-      40.848447
-    ],
+    "location": {
+      "coordinates": [-117.184242, 32.853822], 
+      "type": "Point"
+    },
     "socialProfiles": {
       "facebook": "facebook.com/ben",
       "instagram": "benharloe"
@@ -18,10 +18,10 @@
   },
   {
     "username": "kyleconnolly",
-    "location": [
-      -73.961704,
-      40.662942
-    ],
+    "location": {
+      "coordinates": [-117.183268, 32.853431], 
+      "type": "Point"
+    },
     "socialProfiles": {
       "facebook": "facebook.com/kyle",
       "instagram": "kyle"
@@ -34,10 +34,10 @@
   },
   {
     "username": "johnm",
-    "location": [
-      -73.98241999999999,
-      40.579505
-    ],
+    "location": {
+      "coordinates": [-117.184637, 32.852760], 
+      "type": "Point"
+    },
     "socialProfiles": {
       "facebook": "facebook.com/john"
     },
@@ -49,10 +49,10 @@
   },
   {
     "username": "kevin",
-    "location": [
-      -73.8601152,
-      40.7311739
-    ],
+    "location": {
+      "coordinates": [-117.188189, 32.854047], 
+      "type": "Point"
+    },
     "socialProfiles": {
       "facebook": "facebook.com/ben",
       "snapchat": "kevinsemo",
@@ -66,10 +66,10 @@
   },
   {
     "username": "Clark",
-    "location": [
-      -73.8803827,
-      40.7643124
-    ],
+    "location": {
+      "coordinates": [-117.187062, 32.851830], 
+      "type": "Point"
+    },
     "socialProfiles": {
       "snapchat": "clark",
       "linkedin": "clarkphan",
@@ -85,10 +85,10 @@
   },
   {
     "username": "TheTravMan",
-    "location": [
-      -73.98513559999999,
-      40.7676919
-    ],
+    "location": {
+      "coordinates": [-117.204316, 32.854476], 
+      "type": "Point"
+    },
     "socialProfiles": {
       "snapchat": "Travis",
       "linkedin": "Travis"
@@ -102,10 +102,10 @@
   },
   {
     "username": "David",
-    "location": [
-      -73.9068506,
-      40.6199034
-    ],
+    "location": {
+      "coordinates": [-117.234294, 32.849433], 
+      "type": "Point"
+    },
     "socialProfiles": {
       "snapchat": "David",
       "linkedin": "David"
@@ -119,10 +119,10 @@
   },
   {
     "username": "johnd",
-    "location": [
-      -74.00528899999999,
-      40.628886
-    ],
+    "location": {
+      "coordinates": [-117.273001, 32.851099], 
+      "type": "Point"
+    },
     "files": {
       "audiofile": "audio_url",
       "javascript": "javascript_url"
