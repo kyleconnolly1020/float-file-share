@@ -3,6 +3,8 @@ import UserBanner from "../UserBanner";
 import NavBar from "../NavBar";
 import Logo from "../Logo";
 import users from "./users.json";
+import BurgerMenu from "../BurgerMenu";
+
 class Home extends React.Component {
     state = {
         users
@@ -11,9 +13,11 @@ class Home extends React.Component {
     render() {
         return (
             <div>
+                <BurgerMenu/> 
                 <Logo />
+                 
                 <div className="container">
-                    <div className="appWindow">
+                    <div className="appWindow">                    
                         <NavBar
                             location="La Jolla, California"
                         />
