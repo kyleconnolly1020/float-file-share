@@ -23,7 +23,7 @@ var UserSchema = new Schema({
   description: {
     type: String
   },
-  files: [
+  files:[
     {
       type: Schema.Types.ObjectId,
       ref: "File"
