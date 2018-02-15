@@ -8,12 +8,17 @@ class UserBanner extends React.Component {
     state = {
         open: false
     }
+    handler = () => {
+        this.setState({
+            open: !this.state.open
+        });
+    }
     render() {
         return (
             <div>
                 <Panel id="collapsible-panel-example-1" expanded={this.state.open} >
-                    <div className="container userBanner" onClick={() => this.setState({ open: !this.state.open })}> 
-                    <UserProfile image={this.props.image ? this.props.image : "http://www.skywardimaging.com/wp-content/uploads/2015/11/default-user-image.png"}/>
+                    <div className="container userBanner"> 
+                    <UserProfile  action={() => this.handler()} image={this.props.image ? this.props.image : "http://www.skywardimaging.com/wp-content/uploads/2015/11/default-user-image.png"}/>
                     <div className="userName">{this.props.userName}</div>
                     <div className="radius">{this.props.radius}</div>
                     <SocialMediaBar
@@ -29,10 +34,23 @@ class UserBanner extends React.Component {
                     </div>
                     <Panel.Collapse>
                         <Panel.Body>
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life
-                            accusamus terry richardson ad squid. Nihil anim keffiyeh
-                            helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                            ea proident.
+                            <div className="row">
+                                <div className="col-md-6">
+                                    {<p>{this.props.description}</p>}
+                                    <p>Social Media:</p>
+                                    {this.props.userSocials.facebook ? (<p>{'Facebook: '+ this.props.userSocials.facebook} </p>) : null}
+                                    {this.props.userSocials.twitter ? (<p>{'Twitter: ' + this.props.userSocials.twitter}</p>) : null}
+                                    {this.props.userSocials.snapchat ? (<p>{'Snapchat: ' + this.props.userSocials.snapchat}</p>) : null}
+                                    {this.props.userSocials.linkedin ? (<p>{'LinkedIn: ' + this.props.userSocials.linkedin}</p>) : null}
+                                    {this.props.userSocials.instagram ? (<p>{'Instagram: ' + this.props.userSocials.instagram}</p>) : null}
+                                </div>
+                                <div className="col-md-6">
+                                    <p>Files:</p>
+                                    {this.props.userFiles.pdf ? (<p>{'Pdf: ' + this.props.userFiles.pdf}</p>) : null}
+                                    {this.props.userFiles.audiofile ? (<p>{'Audio File: ' + this.props.userFiles.audiofile}</p>) : null}
+                                    {this.props.userFiles.javascript ? (<p>{'JavaScript: ' + this.props.userFiles.javascript}</p>) : null}
+                                </div>
+                            </div>
                         </Panel.Body>
                     </Panel.Collapse>
                 </Panel>

@@ -1,6 +1,7 @@
 
 .location {
-    position: relative;
+    position: absolute;
+    margin-left: 40%;
     top: 6px;
     left: 10px;
     font-family: 'Raleway', sans-serif;
