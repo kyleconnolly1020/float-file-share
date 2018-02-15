@@ -15,7 +15,7 @@ const userSeed = [
       "facebook": "facebook.com/ben",
       "instagram": "benharloe"
     },
-    "files": {
+    "savedFiles": {
       "pdf": "pdf_url",
       "audiofile": "audio_url"
     },
@@ -32,7 +32,7 @@ const userSeed = [
       "facebook": "facebook.com/kyle",
       "instagram": "kyle"
     },
-    "files": {
+    "savedFiles": {
       "audiofile": "audio_url"
     },
     "image": "https://image.flaticon.com/icons/svg/163/163837.svg",
@@ -47,7 +47,7 @@ const userSeed = [
     "socialProfiles": {
       "facebook": "facebook.com/john"
     },
-    "files": {
+    "savedFiles": {
       "javascript": "javascript_url"
     },
     "image": "https://image.flaticon.com/icons/svg/163/163814.svg",
@@ -64,7 +64,7 @@ const userSeed = [
       "snapchat": "kevinsemo",
       "linkedin": "kevinsemo"
     },
-    "files": {
+    "savedFiles": {
       "javascript": "javascript_url"
     },
     "image": "https://image.flaticon.com/icons/svg/163/163804.svg",
@@ -81,7 +81,7 @@ const userSeed = [
       "linkedin": "clarkphan",
       "twitter": "twitter.com/clarkphan"
     },
-    "files": {
+    "savedFiles": {
       "pdf": "pdf_url",
       "audiofile": "audio_url",
       "javascript": "javascript_url"
@@ -99,7 +99,7 @@ const userSeed = [
       "snapchat": "Travis",
       "linkedin": "Travis"
     },
-    "files": {
+    "savedFiles": {
       "pdf": "pdf_url",
       "javascript": "javascript_url"
     },
@@ -116,7 +116,7 @@ const userSeed = [
       "snapchat": "David",
       "linkedin": "David"
     },
-    "files": {
+    "savedFiles": {
       "pdf": "pdf_url",
       "audiofile": "audio_url"
     },
@@ -129,7 +129,7 @@ const userSeed = [
       "coordinates": [-117.273001, 32.851099], 
       "type": "Point"
     },
-    "files": {
+    "savedFiles": {
       "audiofile": "audio_url",
       "javascript": "javascript_url"
     },

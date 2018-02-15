@@ -23,12 +23,9 @@ var UserSchema = new Schema({
   description: {
     type: String
   },
-  files:[
-    {
-      type: Schema.Types.ObjectId,
-      ref: "File"
-    }
-  ]
+  savedFiles: {
+    type: Schema.Types.Mixed
+  }
 });
 
 UserSchema.index({ location: '2dsphere' });
