@@ -2,8 +2,14 @@ import React from "react";
 import UserBanner from "../UserBanner";
 import NavBar from "../NavBar";
 import Logo from "../Logo";
+<<<<<<< HEAD
+import users from "./users.json";
+import BurgerMenu from "../BurgerMenu";
+
+=======
 // import users from "./users.json";
 import axios from "axios";
+>>>>>>> 66c3b9ec816c9dc1f288c551f0fadd916aa3cb9a
 class Home extends React.Component {
     state = {
         users : []
@@ -25,12 +31,15 @@ class Home extends React.Component {
             });
         })
     }
+    
     render() {
         return (
             <div>
+                <BurgerMenu/> 
                 <Logo />
+                 
                 <div className="container">
-                    <div className="appWindow">
+                    <div className="appWindow">                    
                         <NavBar
                             location="La Jolla, California"
                         />
