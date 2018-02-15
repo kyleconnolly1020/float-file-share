@@ -15,30 +15,21 @@ class SocialMediaBar extends React.Component {
         switch (icon) {
             case "facebook":
             return <i className='fab fa-facebook-square'></i>;
-            break;
             case "twitter":
             return <i className='fab fa-twitter'></i>;
-            break;
             case "snapchat":
             return <i className='fab fa-snapchat-ghost'></i>;
-            break;
             case "linkedin":
             return <i className='fab fa-linkedin'></i>;
-            break;
             case "instagram":
             return <i className='fab fa-instagram'></i>;
-            break;
             case "pdf":
             return <i className='far fa-file-pdf'></i>;
-            break;
             case "audiofile":
             return <i className='fas fa-file-audio'></i>;
-            break;
             case "javascript":
             return <i className='fab fa-js-square'></i>;
-            break;
             default:
-            break;
         }
     }
 

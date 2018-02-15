@@ -22,7 +22,8 @@ input[type=search] {
 	padding: 9px 10px 9px 32px;
     width: 55px;
     height: 18px;
-    margin-top: 6px;
+	margin-top: 6px;
+	margin-left: 50px;
     float: left;
 	
 	-webkit-border-radius: 50%;
