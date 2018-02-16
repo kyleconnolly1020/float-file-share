@@ -4,7 +4,7 @@ import "./Logo.css";
 class Logo extends React.Component {
     render() {
         return (
-            <h1 id="floatLogo">Float</h1>
+            <h1 id="floatLogo"><a href="/">Float</a></h1>
         )
     }
 }

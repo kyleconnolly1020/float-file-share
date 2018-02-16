@@ -6,4 +6,15 @@
     color: white;
     margin-top: 0;
     text-shadow: 3px 3px black;
+
 }
+
+a, a:hover{
+    text-align: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    margin-top: inherit;
+    text-shadow: inherit;
+    text-decoration: none; /* no underline */
+  }
