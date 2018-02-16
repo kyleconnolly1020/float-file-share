@@ -247,6 +247,20 @@ braces@^2.3.0:
     split-string "^3.0.2"
     to-regex "^3.0.1"
 
+browser-resolve@^1.8.1:
+  version "1.11.2"
+  resolved "https://registry.yarnpkg.com/browser-resolve/-/browser-resolve-1.11.2.tgz#8ff09b0a2c421718a1051c260b32e48f442938ce"
+  dependencies:
+    resolve "1.1.7"
+
+browserify-optional@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/browserify-optional/-/browserify-optional-1.0.1.tgz#1e13722cfde0d85f121676c2a72ced533a018869"
+  dependencies:
+    ast-transform "0.0.0"
+    ast-types "^0.7.0"
+    browser-resolve "^1.8.1"
+
 bson@~1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/bson/-/bson-1.0.4.tgz#93c10d39eaa5b58415cbc4052f3e53e562b0b72c"
@@ -330,7 +344,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.5:
+classnames@^2.1.1, classnames@^2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
 
@@ -624,6 +638,10 @@ esprima@~3.1.0:
 etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
+
+eve@~0.5.1:
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/eve/-/eve-0.5.4.tgz#67d080b9725291d7e389e34c26860dd97f1debaa"
 
 event-stream@~3.3.0:
   version "3.3.4"
@@ -1270,19 +1288,6 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-<<<<<<< HEAD
-jstransform@^11.0.3:
-  version "11.0.3"
-  resolved "https://registry.yarnpkg.com/jstransform/-/jstransform-11.0.3.tgz#09a78993e0ae4d4ef4487f6155a91f6190cb4223"
-  dependencies:
-    base62 "^1.1.0"
-    commoner "^0.10.1"
-    esprima-fb "^15001.1.0-dev-harmony-fb"
-    object-assign "^2.0.0"
-    source-map "^0.4.2"
-
-=======
->>>>>>> 45fdff2c65be00f98bf5fff0b3ea046b6772d8f3
 kareem@2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/kareem/-/kareem-2.0.4.tgz#8e648733c1e45b7d5ca1cf36c364e2787f895ced"
@@ -1838,6 +1843,16 @@ react-bootstrap@^0.32.1:
     uncontrollable "^4.1.0"
     warning "^3.0.0"
 
+react-burger-menu@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/react-burger-menu/-/react-burger-menu-2.2.3.tgz#43edbb826f1bf069cadcbb0f11aa8febdad8c7ee"
+  dependencies:
+    browserify-optional "^1.0.0"
+    classnames "^2.1.1"
+    eve "~0.5.1"
+    prop-types "^15.5.8"
+    snapsvg-cjs "0.0.6"
+
 react-overlays@^0.8.0:
   version "0.8.3"
   resolved "https://registry.yarnpkg.com/react-overlays/-/react-overlays-0.8.3.tgz#fad65eea5b24301cca192a169f5dddb0b20d3ac5"
@@ -2023,6 +2038,10 @@ resolve-url@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
 
+resolve@1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
+
 rimraf@2, rimraf@^2.5.1, rimraf@^2.6.1:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.2.tgz#2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36"
@@ -2167,6 +2186,18 @@ snapdragon@^0.8.1:
     source-map-resolve "^0.5.0"
     use "^2.0.0"
 
+snapsvg-cjs@0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/snapsvg-cjs/-/snapsvg-cjs-0.0.6.tgz#3b2f56af2573d3d364c3ed5bf8885745f4d2dde1"
+  dependencies:
+    snapsvg "0.5.1"
+
+snapsvg@0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/snapsvg/-/snapsvg-0.5.1.tgz#0caf52c79189a290746fc446cc5e863f6bdddfe3"
+  dependencies:
+    eve "~0.5.1"
+
 sntp@1.x.x:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/sntp/-/sntp-1.0.9.tgz#6541184cc90aeea6c6e7b35e2659082443c66198"
@@ -2196,6 +2227,12 @@ source-map@^0.4.2:
 source-map@^0.5.6, source-map@~0.5.0:
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
+
+source-map@~0.1.30:
+  version "0.1.43"
+  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.1.43.tgz#c24bc146ca517c1471f5dacbe2571b2b7f9e3346"
+  dependencies:
+    amdefine ">=0.0.4"
 
 spawn-command@^0.0.2-1:
   version "0.0.2-1"
