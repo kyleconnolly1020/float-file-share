@@ -13,6 +13,7 @@ module.exports = {
   searchUsername: function (req, res) {
     db.User
       .find({ username: {'$regex': req.params.username, $options:'i'}})
+      .populate("files")
       .then(data => res.json(data))
   },
   
@@ -26,11 +27,12 @@ module.exports = {
           },
           //SET DISTANCE FOR $near QUERY HERE
           //Distance in meters
-          $maxDistance: 50000,
+          $maxDistance: 5000,
           $minDistance: 0
         }
       }
-    }).then(data => res.json(data))
+    }).populate("files")
+    .then(data => res.json(data))
   },
   findById: function (req, res) {
     db.User
