@@ -36,19 +36,17 @@ class UserBanner extends React.Component {
                         <Panel.Body>
                             <div className="row">
                                 <div className="col-md-6">
-                                    {<p>{this.props.description}</p>}
-                                    <p>Social Media:</p>
-                                    {this.props.userSocials.facebook ? (<p>{'Facebook: '+ this.props.userSocials.facebook} </p>) : null}
-                                    {this.props.userSocials.twitter ? (<p>{'Twitter: ' + this.props.userSocials.twitter}</p>) : null}
-                                    {this.props.userSocials.snapchat ? (<p>{'Snapchat: ' + this.props.userSocials.snapchat}</p>) : null}
-                                    {this.props.userSocials.linkedin ? (<p>{'LinkedIn: ' + this.props.userSocials.linkedin}</p>) : null}
-                                    {this.props.userSocials.instagram ? (<p>{'Instagram: ' + this.props.userSocials.instagram}</p>) : null}
+                                    {<p><strong>{this.props.description}</strong></p>}
+                                    {this.props.userSocials.facebook ? (<p className="facebook"><span><i className='fab fa-facebook-square'></i></span><a href={this.props.userSocials.facebook} target="_blank">{'  ' +this.props.userSocials.facebook}</a></p>) : null}
+                                    {this.props.userSocials.twitter ? (<p className="twitter"><span><i className='fab fa-twitter'></i></span><a href={this.props.userSocials.twitter} target="_blank">{'  ' + this.props.userSocials.twitter}</a></p>) : null}
+                                    {this.props.userSocials.snapchat ? (<p className="snapchat"><span><i className='fab fa-snapchat-ghost'></i></span>{'  ' + this.props.userSocials.snapchat}</p>) : null}
+                                    {this.props.userSocials.linkedin ? (<p className="linkedin"><span><i className='fab fa-linkedin'></i></span><a href={this.props.userSocials.linkedin} target="_blank">{'  ' + this.props.userSocials.linkedin}</a></p>) : null}
+                                    {this.props.userSocials.instagram ? (<p className="instagram"><span><i className='fab fa-instagram'></i></span><a href={this.props.userSocials.instagram} target="_blank">{'  ' + this.props.userSocials.instagram}</a></p>) : null}
                                 </div>
                                 <div className="col-md-6">
-                                    <p>Files:</p>
-                                    {this.props.userFiles.pdf ? (<p>{'Pdf: ' + this.props.userFiles.pdf}</p>) : null}
-                                    {this.props.userFiles.audiofile ? (<p>{'Audio File: ' + this.props.userFiles.audiofile}</p>) : null}
-                                    {this.props.userFiles.javascript ? (<p>{'JavaScript: ' + this.props.userFiles.javascript}</p>) : null}
+                                    {this.props.userFiles.pdf ? (<p className="pdf"><span><i className='far fa-file-pdf'></i></span><a href={this.props.userFiles.pdf} target="_blank">{'  ' + this.props.userFiles.pdf}</a></p>) : null}
+                                    {this.props.userFiles.audiofile ? (<p className="audiofile"><span><i className='fas fa-file-audio'></i></span><a href={this.props.userFiles.audiofile} target="_blank">{'  ' + this.props.userFiles.audiofile}</a></p>) : null}
+                                    {this.props.userFiles.javascript ? (<p className="javascript"><span><i className='fab fa-js-square'></i></span><a href={this.props.userFiles.javascript} target="_blank">{'  ' + this.props.userFiles.javascript}</a></p>) : null}
                                 </div>
                             </div>
                         </Panel.Body>

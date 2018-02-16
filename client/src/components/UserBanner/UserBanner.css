@@ -19,3 +19,35 @@
     font-size: 14px;
     
 }
+
+.facebook{
+    color: blue;
+}
+
+.twitter {
+    color: rgb(112, 219, 255);
+}
+
+.snapchat {
+    color: rgb(255, 238, 82)
+}
+
+.linkedin {
+    color: rgb(0, 113, 151)
+}
+
+.instagram {
+    color: rgb(134, 23, 129)
+}
+
+.pdf { 
+    color: rgb(233, 73, 73)
+}
+
+.audiofile {
+    color: rgb(121, 182, 72)
+}
+
+.javascript {
+    color: rgb(151, 14, 14)
+}
