@@ -41,8 +41,13 @@ class ProfileTable extends React.Component {
             </tr>
           </tbody>
         </table>
-        <button type="button" class="btn btn-primary">Upload</button>
-        <button type="button" class="btn btn-primary">Edit</button>
+
+        <div>
+        <input id="input-b5" name="input-b5[]" type="file" multiple/>
+
+
+          <button type="button" className="btn btn-primary">Edit</button>
+        </div>
       </div>
     )
   }
