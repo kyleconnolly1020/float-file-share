@@ -3,13 +3,18 @@ import UserBanner from "../UserBanner";
 import NavBar from "../NavBar";
 import Logo from "../Logo";
 import BurgerMenu from "../BurgerMenu";
-
 // import users from "./users.json";
 import axios from "axios";
 class Home extends React.Component {
     state = {
         users : []
     }
+
+    searchUsersUpdate = userData => {
+        this.setState({ users: userData });
+        console.log(this.state.users);
+    }
+
     updateUsers = userData => {
         this.setState({users: userData}); 
         console.log(this.state.users);
@@ -37,6 +42,7 @@ class Home extends React.Component {
                 <div className="container">
                     <div className="appWindow">                    
                         <NavBar
+                            searchUsersUpdate = {this.searchUsersUpdate}
                             location="La Jolla, California"
                         />
                         {this.state.users.map(user => {
