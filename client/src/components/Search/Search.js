@@ -1,6 +1,7 @@
 import React from "react";
 import "./Search.css";
 import axios from "axios";
+import history from '../../history.js';
 
 class Search extends React.Component { 
     state = {
@@ -19,12 +20,16 @@ class Search extends React.Component {
             .then(response => this.props.searchUsersUpdate(response.data))
             .catch(function (error) {
                 console.log(error);
-            })
+        })
     }
 
     handleFormSubmit = event => {
         
         event.preventDefault();
+        if (this.state.inputValue === "") {
+            history.push('/');
+            window.location.reload();
+        }
         console.log("test");
         this.searchAPI(this.state.inputValue);
     }
@@ -37,7 +42,7 @@ class Search extends React.Component {
                      />
                 </form>
             </span>
-        );
+        )
     }
 }
 

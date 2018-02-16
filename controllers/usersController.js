@@ -12,7 +12,7 @@ module.exports = {
 
   searchUsername: function (req, res) {
     db.User
-      .find({ username: req.params.username })
+      .find({ username: {'$regex': req.params.username, $options:'i'}})
       .then(data => res.json(data))
   },
   
