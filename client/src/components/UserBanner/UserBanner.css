@@ -51,3 +51,7 @@
 .javascript {
     color: rgb(151, 14, 14)
 }
+
+a:hover {
+    text-decoration: none;
+}
