@@ -20,9 +20,6 @@
   },
   "dependencies": {
     "express": "^4.15.4",
-    "mongoose": "^5.0.5",
-    "react-bootstrap": "^0.32.1",
-    "react-burger-menu": "^2.2.3",
-    "react-router-dom": "^4.2.2"
+    "mongoose": "^5.0.5"
   }
 }
