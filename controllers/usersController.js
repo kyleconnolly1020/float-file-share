@@ -27,7 +27,7 @@ module.exports = {
           },
           //SET DISTANCE FOR $near QUERY HERE
           //Distance in meters
-          $maxDistance: 5000,
+          $maxDistance: 100000,
           $minDistance: 0
         }
       }

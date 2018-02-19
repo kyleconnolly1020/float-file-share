@@ -1,17 +1,13 @@
 import React from "react";
 import "./ProfileTable.css";
-import ReactTable from 'react-table'
-
-const Sort = () => {
-
-}
 
 class ProfileTable extends React.Component {
+
   render() {
     return (
       <div>
 
-        <table class="table table-striped">
+        <table className="table table-striped">
           <thead>
             <tr>
               <th scope="col">ID</th>
@@ -41,8 +37,8 @@ class ProfileTable extends React.Component {
             </tr>
           </tbody>
         </table>
-        <button type="button" class="btn btn-primary">Upload</button>
-        <button type="button" class="btn btn-primary">Edit</button>
+
+
       </div>
     )
   }

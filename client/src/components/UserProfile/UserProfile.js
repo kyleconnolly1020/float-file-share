@@ -3,7 +3,7 @@ import "./UserProfile.css";
 
 class UserProfile extends React.Component {
     
-    render(props){
+    render(){
         return(
             <img className="circle-avatar" alt="profPic" src={this.props.image} onClick={this.props.action}/>
         )
