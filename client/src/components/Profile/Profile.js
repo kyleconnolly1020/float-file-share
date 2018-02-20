@@ -14,6 +14,8 @@ import {
 } from "react-bootstrap";
 import AWS from "aws-sdk";
 import uuidv4 from "uuid/v4";
+import axios from "axios";
+
 
 // Initialize the Amazon Cognito credentials provider
 AWS.config.region = "us-east-1"; // Region
@@ -25,6 +27,14 @@ const s3 = new AWS.S3({
   apiVersion: "2006-03-01",
   params: { Bucket: "floatfileshare" }
 });
+
+const postFile = fileData => {
+  axios.post("/api/users/update", fileData)
+    .then(response => console.log(response.data))
+    .catch(function(error) {
+      console.log(error);
+    })
+};
 
 class Profile extends React.Component {
   state = {
@@ -64,11 +74,15 @@ class Profile extends React.Component {
       },
       function(err, data) {
         if (err) {
-          return alert("There was an error uploading your photo: ", err.message);
+          return alert("There was an error uploading your file: ", err.message);
         }
-        alert("Successfully uploaded photo.");
+        alert("Successfully uploaded file");
         console.log(data);
-        // viewAlbum(albumName);
+        postFile({
+          url: data.Location,
+          filetype: userFile.type,
+          username: "kyleconnolly"
+        });
       }
     );
   }

@@ -17,6 +17,21 @@ module.exports = {
       .then(data => res.json(data))
   },
   
+  addFile: function (req, res) {
+    console.log(req.body);
+    db.File
+      .create({
+        "url": req.body.url, 
+        "filetype": req.body.filetype
+      })
+      .then(data => {
+        return db.User.findOneAndUpdate({ "username": req.body.username }, { $push: { files: data._id } }, { new: true });
+      })
+      .catch( error => {
+        console.log(error);
+      });
+  },
+
   findNear: function (req, res) {
     db.User.find({
       location: {
@@ -27,7 +42,7 @@ module.exports = {
           },
           //SET DISTANCE FOR $near QUERY HERE
           //Distance in meters
-          $maxDistance: 100000,
+          $maxDistance: 1000000,
           $minDistance: 0
         }
       }
