@@ -32,6 +32,13 @@ module.exports = {
       });
   },
 
+  updateUser: function (req, res) {
+    db.User
+      .findOneAndUpdate({ "username": req.params.username }, req.body)
+      .then(data => res.json(data))
+      .catch(err => res.status(422).json(err));
+  },
+
   findNear: function (req, res) {
     db.User.find({
       location: {

@@ -29,21 +29,30 @@ const s3 = new AWS.S3({
 });
 
 const postFile = fileData => {
-  axios.post("/api/users/update", fileData)
+  axios.post("/api/users/upload", fileData)
     .then(response => console.log(response.data))
     .catch(function(error) {
       console.log(error);
     })
 };
 
+const updateUser = (username, updateInfo) => {
+  axios.put(`/api/users/update/${username}`, updateInfo)
+    .then(response => {
+      console.log(response.data)
+    })
+    .catch(error => console.log(error))
+}
+
 class Profile extends React.Component {
   state = {
-    file: null
+    file: null, 
   };
 
   handleFormSubmit = event => {
     event.preventDefault();
     this.uploadToS3(this.state.file);
+    updateUser()
   };
 
   handleInputChange = event => {
