@@ -59,6 +59,7 @@ class Home extends React.Component {
                                         console.log(file.filetype);
                                         if (file.filetype === "pdf")
                                         return true;
+                                        return false;
                                     })}
                                     audiofile = {user.savedFiles.audiofile ? "true"  : null}
                                     javascript = {user.savedFiles.javascript ? "true"  : null}
