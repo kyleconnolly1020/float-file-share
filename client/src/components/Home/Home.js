@@ -61,9 +61,25 @@ class Home extends React.Component {
                                         return true;
                                         return false;
                                     })}
-                                    audiofile = {user.savedFiles.audiofile ? "true"  : null}
-                                    javascript = {user.savedFiles.javascript ? "true"  : null}
-
+                                    audiofile = {user.files.find(file => {
+                                        console.log(file.filetype);
+                                        if (file.filetype === "audio/mp3")
+                                        return true;
+                                        return false;
+                                    })}
+                                    javascript = {user.files.find(file => {
+                                        console.log(file.filetype);
+                                        if (file.filetype === "application/javascript")
+                                        return true;
+                                        return false;
+                                    })}
+                                    imagefile = {user.files.find(file => {
+                                        console.log(file.filetype);
+                                        if (file.filetype === "image/jpeg")
+                                        return true;
+                                        return false;
+                                    })}
+            
                                     description = {user.description ? user.description : null}
                                     userSocials={user.socialProfiles}
                                     userFiles={user.files}

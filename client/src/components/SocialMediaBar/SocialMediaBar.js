@@ -29,6 +29,8 @@ class SocialMediaBar extends React.Component {
             return <i className='fas fa-file-audio'></i>;
             case "javascript":
             return <i className='fab fa-js-square'></i>;
+            case "imagefile":
+            return <i class="fas fa-image"></i>;
             default:
         }
     }
