@@ -44,7 +44,14 @@ class UserBanner extends React.Component {
                                     {this.props.userSocials.instagram ? (<p className="instagram"><span><i className='fab fa-instagram'></i></span><a href={this.props.userSocials.instagram} target="_blank">{'  ' + this.props.userSocials.instagram}</a></p>) : null}
                                 </div>
                                 <div className="col-md-6">
-                                    {this.props.userFiles.pdf ? (<p className="pdf"><span><i className='far fa-file-pdf'></i></span><a href={this.props.userFiles.pdf} target="_blank">{'  ' + this.props.userFiles.pdf}</a></p>) : null}
+                                    {this.props.userFiles.map(file => {
+                                        switch(file.filetype) {
+                                            case "pdf":
+                                            return <p className="pdf"><span><i className='far fa-file-pdf'></i></span><a href={file.url} target="_blank">{'  ' + file.filename}</a></p>
+                                            default:
+                                        }
+                                        return true;
+                                    })}
                                     {this.props.userFiles.audiofile ? (<p className="audiofile"><span><i className='fas fa-file-audio'></i></span><a href={this.props.userFiles.audiofile} target="_blank">{'  ' + this.props.userFiles.audiofile}</a></p>) : null}
                                     {this.props.userFiles.javascript ? (<p className="javascript"><span><i className='fab fa-js-square'></i></span><a href={this.props.userFiles.javascript} target="_blank">{'  ' + this.props.userFiles.javascript}</a></p>) : null}
                                 </div>
