@@ -7,7 +7,7 @@ import BurgerMenu from "../BurgerMenu";
 import axios from "axios";
 class Home extends React.Component {
     state = {
-        users : []
+        users: []
     }
 
     searchUsersUpdate = userData => {
@@ -16,36 +16,61 @@ class Home extends React.Component {
     }
 
     updateUsers = userData => {
-        this.setState({users: userData}); 
+        this.setState({ users: userData });
         console.log(this.state.users);
     }
+
+    componentWillMount() {
+        const accessToken = localStorage.getItem("accessToken");
+        const lock = this.props.lock
+
+        lock.getUserInfo(accessToken, function (error, profile) {
+            if (error) {
+                // Handle error
+                return;
+            }
+            localStorage.setItem("profileId", JSON.stringify(profile.sub));
+            console.log(profile.sub);
+
+            var accessToken = null;
+            if (localStorage.getItem("accessToken")) {
+                accessToken = localStorage.getItem("accessToken")
+                lock.getUserInfo(accessToken, function (error, profile) {
+                    if (!error) {
+                        console.log("hello " + profile.name);
+                    }
+                });
+            }
+        });
+    }
+
     componentDidMount() {
         const self = this;
-        navigator.geolocation.getCurrentPosition(function(position) {
+        navigator.geolocation.getCurrentPosition(function (position) {
             console.log(position.coords.longitude, position.coords.latitude);
             axios.post('/api/users/near', {
-                coords:[position.coords.longitude, position.coords.latitude]
+                coords: [position.coords.longitude, position.coords.latitude]
             })
-            .then(response => self.updateUsers(response.data))
-            .catch(function (error) {
-                console.log(error);
-            });
+                .then(response => self.updateUsers(response.data))
+                .catch(function (error) {
+                    console.log(error);
+                });
         })
     }
-    
+
     render() {
         return (
             <div>
-                <BurgerMenu/> 
+                <BurgerMenu />
                 <Logo />
                 <div className="container">
-                    <div className="appWindow">                    
+                    <div className="appWindow">
                         <NavBar
-                            searchUsersUpdate = {this.searchUsersUpdate}
+                            searchUsersUpdate={this.searchUsersUpdate}
                             location="La Jolla, California"
                         />
                         {this.state.users.map(user => {
-                            return(
+                            return (
                                 <UserBanner
                                     userName={user.username}
                                     radius={`latitude: ${user.location.coordinates[0]} longitude: ${user.location.coordinates[1]}`}
@@ -55,32 +80,32 @@ class Home extends React.Component {
                                     linkedin={user.socialProfiles.linkedin ? "true" : null}
                                     instagram={user.socialProfiles.instagram ? "true" : null}
 
-                                    pdf = {user.files.find(file => {
+                                    pdf={user.files.find(file => {
                                         console.log(file.filetype);
                                         if (file.filetype === "pdf")
-                                        return true;
+                                            return true;
                                         return false;
                                     })}
-                                    audiofile = {user.files.find(file => {
+                                    audiofile={user.files.find(file => {
                                         console.log(file.filetype);
                                         if (file.filetype === "audio/mp3")
-                                        return true;
+                                            return true;
                                         return false;
                                     })}
-                                    javascript = {user.files.find(file => {
+                                    javascript={user.files.find(file => {
                                         console.log(file.filetype);
                                         if (file.filetype === "application/javascript")
-                                        return true;
+                                            return true;
                                         return false;
                                     })}
-                                    imagefile = {user.files.find(file => {
+                                    imagefile={user.files.find(file => {
                                         console.log(file.filetype);
                                         if (file.filetype === "image/jpeg")
-                                        return true;
+                                            return true;
                                         return false;
                                     })}
-            
-                                    description = {user.description ? user.description : null}
+
+                                    description={user.description ? user.description : null}
                                     userSocials={user.socialProfiles}
                                     userFiles={user.files}
                                     image={user.image}
