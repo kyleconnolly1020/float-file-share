@@ -36,7 +36,7 @@ class SocialMediaBar extends React.Component {
     renderIcons = () => {
         let i = 1;
         for(var icon in this.state.icons){
-            if (this.state.icons[icon] === "true") {
+            if (this.state.icons[icon]) {
                 this.state.rendering.push({icon: this.iconDetection(icon), iconNum:'icon' + i, key: i + 10});
                 i++;
             }
@@ -47,7 +47,6 @@ class SocialMediaBar extends React.Component {
         return (
         <div>
             {this.state.rendering.map(render => {
-                console.log(render);
                 return <span className={render.iconNum} key={render.key}>{render.icon}</span>
             })}
         </div>

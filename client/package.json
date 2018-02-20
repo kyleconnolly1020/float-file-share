@@ -4,7 +4,7 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
-    "aws-sdk": "^2.197.0",
+    "aws-sdk": "^2.198.0",
     "axios": "^0.17.1",
     "history": "^4.7.2",
     "react": "^16.0.0",
