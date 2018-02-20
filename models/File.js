@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const fileSchema = new Schema({
   url: { type: String, required: true },
   filetype: { type: String, required: true },
-  description: String,
+  filename: {type: String, required: true},
   date: { type: Date, default: Date.now }
 });
 
