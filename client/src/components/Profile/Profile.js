@@ -78,9 +78,11 @@ class Profile extends React.Component {
         }
         alert("Successfully uploaded file");
         console.log(data);
+        console.log(userFile);
         postFile({
           url: data.Location,
           filetype: userFile.type,
+          filename: userFile.name,
           username: "kyleconnolly"
         });
       }
