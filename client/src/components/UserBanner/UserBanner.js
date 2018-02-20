@@ -47,7 +47,7 @@ class UserBanner extends React.Component {
                                 <div className="col-md-6">
                                     {this.props.userFiles.map(file => {
                                         switch(file.filetype) {
-                                            case "pdf":
+                                            case "application/pdf":
                                             return <p className="pdf"><span><i className='far fa-file-pdf'></i></span><a href={file.url} target="_blank">{'  ' + file.filename}</a></p>
                                             case "audio/mp3":
                                             return <p className="audiofile"><span><i className='fas fa-file-audio'></i></span><a href={file.url} target="_blank">{'  ' + file.filename}</a></p>

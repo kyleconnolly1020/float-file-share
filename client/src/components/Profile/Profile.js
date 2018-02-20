@@ -5,6 +5,7 @@ import ProfileInfo from "../ProfileInfo";
 import ProfilePic from "../ProfilePic";
 import ProfileNav from "../ProfileNav";
 import ProfileTable from "../ProfileTable";
+import UserBanner from "../UserBanner";
 import {
   FormGroup,
   FormControl,
@@ -47,7 +48,18 @@ const updateUser = (username, updateInfo) => {
 class Profile extends React.Component {
   state = {
     file: null, 
+    user: {}
   };
+  componentDidMount() {
+    axios.get("/api/users/search/kyleconnolly")
+    .then(response => {
+      this.setState({user: response.data[0]})
+      console.log(this.state.user);
+    })
+    .catch(function (error) {
+        console.log(error);
+    })
+  }
 
   handleFormSubmit = event => {
     event.preventDefault();
@@ -106,24 +118,56 @@ class Profile extends React.Component {
           <ProfileNav location="La Jolla, California" />
           <ProfilePic
             image={
-              this.props.image
-                ? this.props.image
+              this.state.user.image
+                ? this.state.user.image
                 : "http://www.skywardimaging.com/wp-content/uploads/2015/11/default-user-image.png"
             }
           />
-          <ProfileInfo userName="Travis Thompson" />
+          <ProfileInfo userName={this.state.user.username}/>
+          {/* <UserBanner
+            userName={this.state.user.username}
+            // radius={`latitude: ${this.state.user.location.coordinates[0]} longitude: ${this.state.user.location.coordinates[1]}`}
+            facebook={this.state.user.socialProfiles.facebook ? "true" : null}
+            twitter={this.state.user.socialProfiles.twitter ? "true" : null}
+            snapchat={this.state.user.socialProfiles.snapchat ? "true" : null}
+            linkedin={this.state.user.socialProfiles.linkedin ? "true" : null}
+            instagram={this.state.user.socialProfiles.instagram ? "true" : null}
+
+            pdf = {this.state.user.files.find(file => {
+                console.log(file.filetype);
+                if (file.filetype === "pdf")
+                return true;
+                return false;
+            })}
+            audiofile = {this.state.user.files.find(file => {
+                console.log(file.filetype);
+                if (file.filetype === "audio/mp3")
+                return true;
+                return false;
+            })}
+            javascript = {this.state.user.files.find(file => {
+                console.log(file.filetype);
+                if (file.filetype === "application/javascript")
+                return true;
+                return false;
+            })}
+            imagefile = {this.state.user.files.find(file => {
+                console.log(file.filetype);
+                if (file.filetype === "image/jpeg")
+                return true;
+                return false;
+            })}
+
+            description = {this.state.user.description ? this.stateuser.description : null}
+            userSocials={this.state.user.socialProfiles}
+            userFiles={this.state.user.files}
+            image={this.state.user.image}
+          /> */}
         </div>
 
         <br />
 
         <div className="container documents">
-          <ProfileTable
-            id="1"
-            type="PDF"
-            fileName="Project 1"
-            dateAdded="02/15/2018"
-          />
-
           <form onSubmit={this.handleFormSubmit} onChange={this.handleInputChange} >
             <FormGroup
               controlId="formControlsFile"
