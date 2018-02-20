@@ -148,7 +148,7 @@ const filesSeed = [
     file: {
       url: "https://s3.amazonaws.com/floatfileshare/learnwebdevelopmentwithvegibit.pdf",
       filetype: "pdf",
-      description: ""
+      filename: "learnwebdevelopmentwithvegibit.pdf"
     }
   },
   {
@@ -156,7 +156,7 @@ const filesSeed = [
     file: {
       url: "https://s3.amazonaws.com/floatfileshare/nodebeginner.pdf",
       filetype: "pdf",
-      description: ""
+      filename: "nodebeginner.pdf"
     }
   },
   {
@@ -164,7 +164,7 @@ const filesSeed = [
     file: {
       url: "https://s3.amazonaws.com/floatfileshare/nodebeginner.pdf",
       filetype: "pdf",
-      description: ""
+      filename: "/nodebeginner.pdf"
     }
   },
   {
@@ -172,7 +172,7 @@ const filesSeed = [
     file: {
       url: "https://s3.amazonaws.com/floatfileshare/nodecraftsman.pdf",
       filetype: "pdf",
-      description: ""
+      filename: "nodecraftsman.pdf"
     }
   }
 ]
