@@ -20,4 +20,7 @@ router
 router.route("/search/:username")
   .get(usersController.searchUsername);
 
+router.route("/update")
+  .post(usersController.addFile);
+
 module.exports = router;

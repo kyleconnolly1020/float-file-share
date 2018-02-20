@@ -13,9 +13,25 @@ module.exports = {
   searchUsername: function (req, res) {
     db.User
       .find({ username: {'$regex': req.params.username, $options:'i'}})
+      .populate("files")
       .then(data => res.json(data))
   },
   
+  addFile: function (req, res) {
+    console.log(req.body);
+    db.File
+      .create({
+        "url": req.body.url, 
+        "filetype": req.body.filetype
+      })
+      .then(data => {
+        return db.User.findOneAndUpdate({ "username": req.body.username }, { $push: { files: data._id } }, { new: true });
+      })
+      .catch( error => {
+        console.log(error);
+      });
+  },
+
   findNear: function (req, res) {
     db.User.find({
       location: {
@@ -26,11 +42,12 @@ module.exports = {
           },
           //SET DISTANCE FOR $near QUERY HERE
           //Distance in meters
-          $maxDistance: 500000,
+          $maxDistance: 1000000,
           $minDistance: 0
         }
       }
-    }).then(data => res.json(data))
+    }).populate("files")
+    .then(data => res.json(data))
   },
   findById: function (req, res) {
     db.User

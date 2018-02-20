@@ -17,6 +17,14 @@ var UserSchema = new Schema({
       default: [0, 0]
     }
   },
+  files: [
+    {
+      // Store ObjectIds in the array
+      type: Schema.Types.ObjectId,
+      // The ObjectIds will refer to the ids in the File model
+      ref: "File"
+    }
+  ],
   socialProfiles: {
     type: Schema.Types.Mixed
   },
