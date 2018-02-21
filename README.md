@@ -45,13 +45,13 @@ App is already deployed. Click on the Heroku link —
 
 ## Built With
 
-* [React](https://reactjs.org/) - The web framework used
-* [Bootstrap v3.3.7](https://getbootstrap.com/docs/3.3/) - 
-* [Amazon S3](https://aws.amazon.com/s3/) -
-* [MongoDB](https://www.mongodb.com/) - 
-* [Mongoose](http://mongoosejs.com/) - 
-* [Node](https://nodejs.org/en/) - 
-* [Auth0](https://auth0.com/) - 
+* [React](https://reactjs.org/) - JavaScript library for building user interfaces.
+* [Bootstrap v3.3.7](https://getbootstrap.com/docs/3.3/) - Front-end library for desigining websites and web applications. 
+* [Amazon S3](https://aws.amazon.com/s3/) - Object storage built to store and retrieve data from anywhere.
+* [MongoDB](https://www.mongodb.com/) - Cross-platform and open-source document-oriented NoSQL database.
+* [Mongoose](http://mongoosejs.com/) - A MongoDB object modeling tool designed to work in an asynchronous environment.
+* [Node](https://nodejs.org/en/) - JavaScript run-time environment for executing JavaScript code server-side.
+* [Auth0](https://auth0.com/) - Authentication and authorization as a service.
 
 ## Team members
 
