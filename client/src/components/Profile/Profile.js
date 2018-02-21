@@ -16,7 +16,6 @@ import {
 import AWS from "aws-sdk";
 import uuidv4 from "uuid/v4";
 import axios from "axios";
-import BurgerMenu from "../BurgerMenu";
 import NavBar from "../NavBar";
 
 

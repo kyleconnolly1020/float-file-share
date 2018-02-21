@@ -2,7 +2,7 @@ import React from "react";
 import UserBanner from "../UserBanner";
 import NavBar from "../NavBar";
 import Logo from "../Logo";
-import BurgerMenu from "../BurgerMenu";
+
 // import users from "./users.json";
 import axios from "axios";
 class Home extends React.Component {
