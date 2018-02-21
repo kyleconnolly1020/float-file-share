@@ -61,7 +61,6 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-                <BurgerMenu />
                 <Logo />
                 <div className="container">
                     <div className="appWindow">
