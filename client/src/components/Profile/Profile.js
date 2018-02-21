@@ -128,16 +128,7 @@ class Profile extends React.Component {
               searchUsersUpdate={this.searchUsersUpdate}
               location="La Jolla, California"
             />
-            <ProfilePic
-              image={
-                this.state.user.image
-                  ? this.state.user.image
-                  : "http://www.skywardimaging.com/wp-content/uploads/2015/11/default-user-image.png"
-              }
-            />
-            <ProfileInfo userName={this.state.user.username} />
-
-
+            
             <UserBanner
               userName={this.state.user.username}
               // radius={`latitude: ${this.state.user.location.coordinates[0]} longitude: ${this.state.user.location.coordinates[1]}`}
@@ -179,20 +170,6 @@ class Profile extends React.Component {
             />
           </div>
         }
-        <br />
-
-        <div className="container documents">
-          <form onSubmit={this.handleFormSubmit} onChange={this.handleInputChange} >
-            <FormGroup
-              controlId="formControlsFile"
-            >
-              <ControlLabel>Upload File</ControlLabel>
-              <FormControl type="file" name="file" />
-              <HelpBlock>Select a file you would like to upload</HelpBlock>
-            </FormGroup>
-            <Button type="submit">Submit</Button>
-          </form>
-        </div>
       </div>
     );
   }
