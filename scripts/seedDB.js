@@ -15,10 +15,6 @@ const userSeed = [
       "facebook": "facebook.com/ben",
       "instagram": "benharloe"
     },
-    "savedFiles": {
-      "pdf": "pdf_url",
-      "audiofile": "audio_url"
-    },
     "image": "https://image.flaticon.com/icons/svg/145/145867.svg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
   },
@@ -31,9 +27,6 @@ const userSeed = [
     "socialProfiles": {
       "facebook": "facebook.com/kyle",
       "instagram": "kyle"
-    },
-    "savedFiles": {
-      "audiofile": "audio_url"
     },
     "image": "https://image.flaticon.com/icons/svg/163/163837.svg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
@@ -64,9 +57,6 @@ const userSeed = [
       "snapchat": "kevinsemo",
       "linkedin": "kevinsemo"
     },
-    "savedFiles": {
-      "javascript": "javascript_url"
-    },
     "image": "https://image.flaticon.com/icons/svg/163/163804.svg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
   },
@@ -81,11 +71,6 @@ const userSeed = [
       "linkedin": "clarkphan",
       "twitter": "twitter.com/clarkphan"
     },
-    "savedFiles": {
-      "pdf": "pdf_url",
-      "audiofile": "audio_url",
-      "javascript": "javascript_url"
-    },
     "image": "https://image.flaticon.com/icons/svg/163/163801.svg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
   },
@@ -98,10 +83,6 @@ const userSeed = [
     "socialProfiles": {
       "snapchat": "Travis",
       "linkedin": "Travis"
-    },
-    "savedFiles": {
-      "pdf": "pdf_url",
-      "javascript": "javascript_url"
     },
     "image": "https://image.flaticon.com/icons/svg/163/163827.svg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
@@ -116,10 +97,6 @@ const userSeed = [
       "snapchat": "David",
       "linkedin": "David"
     },
-    "savedFiles": {
-      "pdf": "pdf_url",
-      "audiofile": "audio_url"
-    },
     "image": "https://image.flaticon.com/icons/svg/145/145859.svg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
   },
@@ -128,10 +105,6 @@ const userSeed = [
     "location": {
       "coordinates": [-117.273001, 32.851099],
       "type": "Point"
-    },
-    "savedFiles": {
-      "audiofile": "audio_url",
-      "javascript": "javascript_url"
     },
     "socialProfiles": {
       "snapchat": "johnd",
@@ -142,40 +115,7 @@ const userSeed = [
   }
 ];
 
-const filesSeed = [
-  {
-    username: "bharloe",
-    file: {
-      url: "https://s3.amazonaws.com/floatfileshare/learnwebdevelopmentwithvegibit.pdf",
-      filetype: "pdf",
-      filename: "learnwebdevelopmentwithvegibit.pdf"
-    }
-  },
-  {
-    username: "bharloe",
-    file: {
-      url: "https://s3.amazonaws.com/floatfileshare/nodebeginner.pdf",
-      filetype: "pdf",
-      filename: "nodebeginner.pdf"
-    }
-  },
-  {
-    username: "kyleconnolly",
-    file: {
-      url: "https://s3.amazonaws.com/floatfileshare/nodebeginner.pdf",
-      filetype: "pdf",
-      filename: "/nodebeginner.pdf"
-    }
-  },
-  {
-    username: "johnd",
-    file: {
-      url: "https://s3.amazonaws.com/floatfileshare/nodecraftsman.pdf",
-      filetype: "pdf",
-      filename: "nodecraftsman.pdf"
-    }
-  }
-]
+const filesSeed = []
 
 db.File.remove({}).then(() => db.User.remove({})
   .then(() => db.User.collection.insertMany(userSeed))
