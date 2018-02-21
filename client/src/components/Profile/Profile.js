@@ -121,7 +121,6 @@ class Profile extends React.Component {
 
       <div>
 
-        <BurgerMenu />
         <Logo />
         {userIsTrue &&
 
