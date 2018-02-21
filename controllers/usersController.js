@@ -22,7 +22,8 @@ module.exports = {
     db.File
       .create({
         "url": req.body.url, 
-        "filetype": req.body.filetype
+        "filetype": req.body.filetype,
+        "filename": req.body.filename
       })
       .then(data => {
         return db.User.findOneAndUpdate({ "username": req.body.username }, { $push: { files: data._id } }, { new: true });

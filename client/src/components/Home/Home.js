@@ -38,7 +38,6 @@ class Home extends React.Component {
             <div>
                 <BurgerMenu/> 
                 <Logo />
-                 
                 <div className="container">
                     <div className="appWindow">                    
                         <NavBar
@@ -55,12 +54,35 @@ class Home extends React.Component {
                                     snapchat={user.socialProfiles.snapchat ? "true" : null}
                                     linkedin={user.socialProfiles.linkedin ? "true" : null}
                                     instagram={user.socialProfiles.instagram ? "true" : null}
-                                    pdf = {user.savedFiles.pdf ? "true"  : null}
-                                    audiofile = {user.savedFiles.audiofile ? "true"  : null}
-                                    javascript = {user.savedFiles.javascript ? "true"  : null}
+
+                                    pdf = {user.files.find(file => {
+                                        console.log(file.filetype);
+                                        if (file.filetype === "pdf")
+                                        return true;
+                                        return false;
+                                    })}
+                                    audiofile = {user.files.find(file => {
+                                        console.log(file.filetype);
+                                        if (file.filetype === "audio/mp3")
+                                        return true;
+                                        return false;
+                                    })}
+                                    javascript = {user.files.find(file => {
+                                        console.log(file.filetype);
+                                        if (file.filetype === "application/javascript")
+                                        return true;
+                                        return false;
+                                    })}
+                                    imagefile = {user.files.find(file => {
+                                        console.log(file.filetype);
+                                        if (file.filetype === "image/jpeg")
+                                        return true;
+                                        return false;
+                                    })}
+            
                                     description = {user.description ? user.description : null}
                                     userSocials={user.socialProfiles}
-                                    userFiles={user.savedFiles}
+                                    userFiles={user.files}
                                     image={user.image}
                                 />
                             )
