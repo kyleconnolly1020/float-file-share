@@ -145,7 +145,7 @@ class Profile extends React.Component {
 
               pdf={this.state.user.files.find(file => {
                 console.log(file.filetype);
-                if (file.filetype === "pdf")
+                if (file.filetype === "application/pdf")
                   return true;
                 return false;
               })}
