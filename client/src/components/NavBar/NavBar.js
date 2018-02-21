@@ -13,8 +13,10 @@ class NavBar extends React.Component {
                 <span className="location">{this.props.location}</span>
 
                 <span className="navbar-brand navbar-right">
-                    <Link to='/profile'>
-                        <span className="glyphicon glyphicon-user"></span>
+                    <Link to={this.props.onProfilePage ? '/' : '/profile'}>
+                        {this.props.onProfilePage 
+                        ? <span className="glyphicon glyphicon-home"></span> 
+                        : <span className="glyphicon glyphicon-user"></span>}
                     </Link>
                 </span>
 

@@ -127,6 +127,7 @@ class Profile extends React.Component {
 
           <div className="container">
             <NavBar
+              onProfilePage={true}
               searchUsersUpdate={this.searchUsersUpdate}
               location="La Jolla, California"
             />
