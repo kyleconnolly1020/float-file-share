@@ -49,6 +49,8 @@ App is already deployed. Click on the Heroku link —
 * [Bootstrap v3.3.7](https://getbootstrap.com/docs/3.3/) - 
 * [Amazon S3](https://aws.amazon.com/s3/) -
 * [MongoDB](https://www.mongodb.com/) - 
+* [Mongoose](http://mongoosejs.com/) - 
+* [Node](https://nodejs.org/en/) - 
 * [Auth0](https://auth0.com/) - 
 
 ## Team members
