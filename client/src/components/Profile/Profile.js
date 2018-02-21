@@ -113,14 +113,9 @@ class Profile extends React.Component {
   render() {
     const userIsTrue = this.state.user;
     return (
-      
-
       <div>
-
-       
         <Logo />
         {userIsTrue && 
-       
         <div className="container">
           <ProfileNav location="La Jolla, California" />
           <ProfilePic
@@ -131,11 +126,9 @@ class Profile extends React.Component {
             }
           />
           <ProfileInfo userName={this.state.user.username}/>
-
-
           <UserBanner
             userName={this.state.user.username}
-            // radius={`latitude: ${this.state.user.location.coordinates[0]} longitude: ${this.state.user.location.coordinates[1]}`}
+            radius={`latitude: ${this.state.user.location.coordinates[0]} longitude: ${this.state.user.location.coordinates[1]}`}
             facebook={this.state.user.socialProfiles.facebook ? "true" : null}
             twitter={this.state.user.socialProfiles.twitter ? "true" : null}
             snapchat={this.state.user.socialProfiles.snapchat ? "true" : null}
