@@ -68,7 +68,7 @@ class UserBanner extends React.Component {
                                     })}
                                 </div>
                             </div>
-                            {this.props.open &&
+                            {this.props.open && 
                             <form onSubmit={this.handleFormSubmit} onChange={this.handleInputChange} >
                                 <FormGroup controlId="formControlsFile">
                                     <ControlLabel>Upload File</ControlLabel>
