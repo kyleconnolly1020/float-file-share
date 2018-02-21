@@ -7,9 +7,10 @@ class NavBar extends React.Component {
     render() {
         return (
             <nav className="navbar navbar-default">
-                <Search
-                    searchUsersUpdate = {this.props.searchUsersUpdate}
-                />
+                {this.props.onProfilePage 
+                    ? null 
+                    : <Search searchUsersUpdate = {this.props.searchUsersUpdate}/>
+                }
                 <span className="location">{this.props.location}</span>
 
                 <span className="navbar-brand navbar-right">
