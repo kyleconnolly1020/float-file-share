@@ -53,13 +53,13 @@ App is already deployed. Click on the Heroku link —
 
 ## Team members
 
-Ben Harloe
-Clark Phan
-Kevin Semo
-Kyle Connolly
-John Mai
+* Ben Harloe
+* Clark Phan
+* Kevin Semo
+* Kyle Connolly
+* John Mai
 
 ## License
 
 ## Acknowledgment 
-*This code was created for the final project of the Trilogy Coding Bootcamp at UCSD Extension.
+This code was created for the final project of the Trilogy Coding Bootcamp at UCSD Extension.
