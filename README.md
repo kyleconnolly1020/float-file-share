@@ -14,8 +14,6 @@ Make sure you have installed all of the following prerequisites on your developm
 * Node.js - [Download & Install Node.js](https://nodejs.org/en/download/) and the npm package manager. If you encounter any problems, you can also use this [GitHub Gist](https://gist.github.com/isaacs/579814) to install Node.js.
 * MongoDB - [Download & Install MongoDB](http://www.mongodb.org/downloads), and make sure it's running on the default port (27017).
 
-
-
 ### Installing
 
 Yarn install in root directory.
@@ -38,7 +36,6 @@ cd ../
 yarn start
 ```
 
-
 ## Deployment
 
 App is already deployed. Click on the Heroku link — 
@@ -60,8 +57,6 @@ App is already deployed. Click on the Heroku link —
 * Kevin Semo
 * Kyle Connolly
 * John Mai
-
-## License
 
 ## Acknowledgment 
 This code was created for the final project of the Trilogy Coding Bootcamp at UCSD Extension.
