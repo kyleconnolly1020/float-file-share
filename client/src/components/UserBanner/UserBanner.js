@@ -69,10 +69,12 @@ class UserBanner extends React.Component {
                                 </div>
                             </div>
                             {this.props.open &&
-                            <form onSubmit={this.props.handleFormSubmit} onChange={this.props.handleInputChange} >
+                            <form onSubmit={this.props.handleFormSubmit} onChange={this.props.handleInputChange} className="text-center">
                                 <FormGroup controlId="formControlsFile">
                                     <ControlLabel>Upload File</ControlLabel>
-                                    <FormControl type="file" name="file" />
+                                    <div id="form">
+                                    <FormControl type="file" name="file"/>
+                                    </div>
                                     <HelpBlock>Select a file you would like to upload</HelpBlock>
                                 </FormGroup>
                                 <Button type="submit">Submit</Button>
