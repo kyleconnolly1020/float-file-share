@@ -57,8 +57,10 @@ class Home extends React.Component {
 
                                     pdf = {user.files.find(file => {
                                         console.log(file.filetype);
-                                        if (file.filetype === "pdf")
-                                        return true;
+                                        if (file.filetype === "application/pdf") {
+                                            console.log("found pdf");
+                                            return true;
+                                        }
                                         return false;
                                     })}
                                     audiofile = {user.files.find(file => {
