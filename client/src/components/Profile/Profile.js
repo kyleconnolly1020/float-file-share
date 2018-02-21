@@ -52,6 +52,7 @@ class Profile extends React.Component {
     file: null,
     user: null
   };
+
   componentWillMount() {
     axios.get("/api/users/search/kyleconnolly")
       .then(response => {
@@ -66,7 +67,7 @@ class Profile extends React.Component {
   handleFormSubmit = event => {
     event.preventDefault();
     this.uploadToS3(this.state.file);
-    updateUser()
+    updateUser();
   };
 
   handleInputChange = event => {
@@ -108,6 +109,7 @@ class Profile extends React.Component {
           filename: userFile.name,
           username: "kyleconnolly"
         });
+        window.location.reload();
       }
     );
   }
@@ -130,6 +132,8 @@ class Profile extends React.Component {
             />
             
             <UserBanner
+              handleFormSubmit = {this.handleFormSubmit}
+              handleInputChange = {this.handleInputChange}
               open = {true}
               userName={this.state.user.username}
               // radius={`latitude: ${this.state.user.location.coordinates[0]} longitude: ${this.state.user.location.coordinates[1]}`}
