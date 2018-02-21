@@ -46,9 +46,9 @@ App is already deployed. Click on the Heroku link —
 * [Bootstrap v3.3.7](https://getbootstrap.com/docs/3.3/) - Front-end library for desigining websites and web applications. 
 * [Amazon S3](https://aws.amazon.com/s3/) - Object storage built to store and retrieve data from anywhere.
 * [MongoDB](https://www.mongodb.com/) - Cross-platform and open-source document-oriented NoSQL database.
-* [Mongoose](http://mongoosejs.com/) - A MongoDB object modeling tool designed to work in an asynchronous environment.
+* [Mongoose](http://mongoosejs.com/) - MongoDB object modeling tool designed to work in an asynchronous environment.
 * [Node](https://nodejs.org/en/) - JavaScript run-time environment for executing JavaScript code server-side.
-* [Auth0](https://auth0.com/) - Authentication and authorization as a service.
+* [Auth0](https://auth0.com/) - A service for authentication and authorization.
 
 ## Team members
 
