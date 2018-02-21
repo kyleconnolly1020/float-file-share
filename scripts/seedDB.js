@@ -29,7 +29,7 @@ const userSeed = [
       "instagram": "kyle"
     },
     "image": "https://image.flaticon.com/icons/svg/163/163837.svg",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
+    "description": "Just a cool 2D dude"
   },
   {
     "username": "johnm",
