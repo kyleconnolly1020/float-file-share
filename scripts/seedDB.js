@@ -121,6 +121,7 @@ db.File.remove({}).then(() => db.User.remove({})
   .then(() => db.User.collection.insertMany(userSeed))
   .then(data => {
     console.log(data.result.n + " records inserted");
+    if (filesSeed.length > 0) {
     for (let i = 0; i < filesSeed.length; i++) {
       // Create a new Note in the db
       db.File.create(filesSeed[i].file)
@@ -138,6 +139,9 @@ db.File.remove({}).then(() => db.User.remove({})
           // If an error occurs, log it
           console.log(err);
         });
+      }
+    } else {
+      process.exit(0);
     }
   })
   .catch(err => {
