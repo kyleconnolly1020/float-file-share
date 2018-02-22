@@ -38,7 +38,7 @@ yarn start
 
 ## Deployment
 
-App is already deployed. Click on the Heroku link — 
+App is deployed on [Heroku](https://float-file-share.herokuapp.com/).
 
 ## Built With
 
