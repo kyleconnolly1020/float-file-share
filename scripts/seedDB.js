@@ -6,7 +6,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/floatusers");
 
 const userSeed = [
   {
-    "auth0id": "1",
+    "auth0id": "auth0|5a83907af5c8213cb27bc941",
     "username": "bharloe",
     "location": {
       "coordinates": [-117.184242, 32.853822],
@@ -14,10 +14,11 @@ const userSeed = [
     },
     "socialProfiles": {
       "facebook": "facebook.com/ben",
-      "instagram": "benharloe"
+      "instagram": "henbarloe",
+      "linkedin": "https://www.linkedin.com/in/benharloe/"
     },
-    "image": "https://s3.amazonaws.com/floatfileshare/default-user-image.png",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
+    "image": "",
+    "description": "I am a web developer in training! Check out my LinkedIn, resume, or say hi on Facebook"
   },
   {
     "auth0id": "2",
