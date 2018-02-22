@@ -4,7 +4,7 @@
   "description": "Mern Demo",
   "main": "server.js",
   "scripts": {
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build && cd ../scripts && node seedDB.js",
     "server": "node server.js",
     "client": "cd client && npm run start",
     "start": "./node_modules/.bin/concurrently \"nodemon server.js\" \"npm run client\"",
