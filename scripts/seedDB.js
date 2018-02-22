@@ -16,7 +16,7 @@ const userSeed = [
       "instagram": "henbarloe",
       "linkedin": "https://www.linkedin.com/in/benharloe/"
     },
-    "image": "",
+    "image": "https://image.flaticon.com/icons/svg/163/163801.svg",
     "description": "I am a web developer in training! Check out my LinkedIn, resume, or say hi on Facebook"
   },
   {
