@@ -26,4 +26,7 @@ router.route("/upload")
 router.route("/update/:username")
   .put(usersController.updateUser);
 
+  router.route("/new")
+  .post(usersController.create);
+
 module.exports = router;

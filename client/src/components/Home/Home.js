@@ -29,18 +29,7 @@ class Home extends React.Component {
                 // Handle error
                 return;
             }
-            localStorage.setItem("profileId", JSON.stringify(profile.sub));
-            console.log(profile.sub);
-
-            var accessToken = null;
-            if (localStorage.getItem("accessToken")) {
-                accessToken = localStorage.getItem("accessToken")
-                lock.getUserInfo(accessToken, function (error, profile) {
-                    if (!error) {
-                        console.log("hello " + profile.name);
-                    }
-                });
-            }
+            localStorage.setItem("profileId", JSON.stringify(profile));
         });
     }
 
