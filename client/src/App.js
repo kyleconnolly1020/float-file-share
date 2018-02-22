@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import history from "./history.js";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Auth0Lock from "auth0-lock";
+import Landing from "./components/Landing";
 
 const lock = new Auth0Lock(
   "53iFqYpDLAFAoYE413j848KsIV2KcvQS",
@@ -15,11 +16,6 @@ class App extends Component {
 
   state = {
     isAuthenticated: false
-  };
-
-  showLock = () => {
-    // Show the Auth0Lock widget
-    lock.show();
   };
 
   componentWillMount() {
@@ -62,7 +58,7 @@ class App extends Component {
           ]
           : [
             <div>
-              <button onClick={this.showLock}>Sign In</button>
+              <Landing lock={lock} />
             </div>
           ]
       }
