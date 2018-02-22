@@ -131,6 +131,7 @@ class Profile extends React.Component {
             />
             
             <UserBanner
+              updateUser = {this.updateUser}
               handleFormSubmit = {this.handleFormSubmit}
               handleInputChange = {this.handleInputChange}
               open = {true}
