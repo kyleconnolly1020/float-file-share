@@ -12,6 +12,11 @@
     font-family: 'Raleway', sans-serif;
 }
 
+input {
+    font-family: 'Raleway', sans-serif;
+    color: black;
+}
+
 .radius {
     margin-left:110px;
     position: relative;
@@ -62,4 +67,8 @@ a:hover {
     justify-content: center;
     align-items: center;
     margin-left: 9%
+}
+
+#submitButton {
+    margin-left: 110px;
 }
