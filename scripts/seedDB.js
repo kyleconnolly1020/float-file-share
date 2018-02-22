@@ -13,7 +13,6 @@ const userSeed = [
       "type": "Point"
     },
     "socialProfiles": {
-      "facebook": "facebook.com/ben",
       "instagram": "henbarloe",
       "linkedin": "https://www.linkedin.com/in/benharloe/"
     },

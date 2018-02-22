@@ -42,8 +42,7 @@ class App extends Component {
 
           let newUser = {
             auth0id: profile.sub,
-            username: profile.email,
-            image: "https://s3.amazonaws.com/floatfileshare/default-user-image.png"
+            username: profile.email
           }
 
           axios

@@ -29,7 +29,7 @@ class Home extends React.Component {
                 // Handle error
                 return;
             }
-            localStorage.setItem("profileId", JSON.stringify(profile));
+            localStorage.setItem("profile", JSON.stringify(profile));
         });
     }
 
@@ -56,6 +56,7 @@ class Home extends React.Component {
                         <NavBar
                             searchUsersUpdate={this.searchUsersUpdate}
                             location="La Jolla, California"
+                            lock={this.props.lock}
                         />
                         {this.state.users.map(user => {
                             return (
