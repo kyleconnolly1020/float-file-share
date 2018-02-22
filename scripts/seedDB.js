@@ -16,7 +16,7 @@ const userSeed = [
       "facebook": "facebook.com/ben",
       "instagram": "benharloe"
     },
-    "image": "https://image.flaticon.com/icons/svg/145/145867.svg",
+    "image": "https://s3.amazonaws.com/floatfileshare/default-user-image.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
   },
   {
