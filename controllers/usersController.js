@@ -16,6 +16,12 @@ module.exports = {
       .populate("files")
       .then(data => res.json(data))
   },
+
+  searchAuth: function (req, res) {
+    db.User
+      .find({ auth0id: req.params.auth0id})
+      .then(data => res.json(data))
+  },
   
   addFile: function (req, res) {
     console.log(req.body);
@@ -75,6 +81,13 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  // updateLocation: function (req, res) {
+  //   console.log("test");
+  //   db.User
+  //     .findOneAndUpdate({ auth0id: req.body.auth0id }, req.body.coords)
+  //     .then(dbModel => res.json(dbModel))
+  //     .catch(err => res.status(422).json(err));
+  // },
   remove: function (req, res) {
     db.User
       .findById({ _id: req.params.id })
