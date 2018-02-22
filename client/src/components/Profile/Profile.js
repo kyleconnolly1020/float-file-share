@@ -170,9 +170,10 @@ class Profile extends React.Component {
             />
 
             <UserBanner
-              handleFormSubmit={this.handleFormSubmit}
-              handleInputChange={this.handleInputChange}
-              open={true}
+              updateUser = {this.updateUser}
+              handleFormSubmit = {this.handleFormSubmit}
+              handleInputChange = {this.handleInputChange}
+              open = {true}
               userName={this.state.user.username}
               // radius={`latitude: ${this.state.user.location.coordinates[0]} longitude: ${this.state.user.location.coordinates[1]}`}
               facebook={this.state.user.socialProfiles.facebook ? "true" : null}
