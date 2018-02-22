@@ -77,7 +77,7 @@ class UserBanner extends React.Component {
             <div>
                 <Panel id="collapsible-panel-example-1" expanded={this.props.open ? this.props.open : this.state.open} >
                     <div className="container userBanner">
-                        <UserProfile action={() => this.handler()} image={this.props.image ? this.props.image : "http://www.skywardimaging.com/wp-content/uploads/2015/11/default-user-image.png"} />
+                        <UserProfile action={() => this.handler()} image={this.props.image ? this.props.image : "https://s3.amazonaws.com/floatfileshare/default-user-image.png"} />
                         <div className="userName">{this.props.userName}</div>
                         <div className="radius">{this.props.radius}</div>
                         <SocialMediaBar

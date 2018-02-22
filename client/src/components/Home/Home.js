@@ -16,6 +16,18 @@ class Home extends React.Component {
     }
 
     updateUsers = userData => {
+        //Working on filter to remove logged in
+        // let currentUserAuth = localStorage.getItem("profileAuthId");
+
+        // userData.forEach(function(e) {
+        //     console.log(e);
+        //     if (e.auth0id === currentUserAuth) {
+        //         userData.splice(e, 1)
+        //     }
+            
+        // });
+          
+
         this.setState({ users: userData });
         console.log(this.state.users);
     }
@@ -29,7 +41,7 @@ class Home extends React.Component {
                 // Handle error
                 return;
             }
-            localStorage.setItem("profileId", JSON.stringify(profile));
+            localStorage.setItem("profileAuthId", JSON.stringify(profile.sub));
         });
     }
 
@@ -56,6 +68,7 @@ class Home extends React.Component {
                         <NavBar
                             searchUsersUpdate={this.searchUsersUpdate}
                             location="La Jolla, California"
+                            lock={this.props.lock}
                         />
                         {this.state.users.map(user => {
                             return (

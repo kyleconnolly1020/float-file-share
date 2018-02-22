@@ -20,6 +20,10 @@ router
 router.route("/search/:username")
   .get(usersController.searchUsername);
 
+//route to get username based on auth0id
+router.route("/username/:auth0id")
+  .get(usersController.searchAuth);
+
 router.route("/upload")
   .post(usersController.addFile);
 
@@ -28,5 +32,8 @@ router.route("/update/:username")
 
 router.route("/new")
   .post(usersController.create);
+
+// router.route("/location")
+//   .put(usersController.updateLocation);  
 
 module.exports = router;
