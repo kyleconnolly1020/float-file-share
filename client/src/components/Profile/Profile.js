@@ -130,6 +130,7 @@ class Profile extends React.Component {
     var uuid = uuidv4();
 
     var fileKey = uuid;
+    const self = this; 
 
     s3.upload(
       {
@@ -149,7 +150,7 @@ class Profile extends React.Component {
           url: data.Location,
           filetype: userFile.type,
           filename: userFile.name,
-          username: "kyleconnolly"
+          username: self.state.user.username
         });
         window.location.reload();
       }
