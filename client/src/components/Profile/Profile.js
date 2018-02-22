@@ -74,26 +74,36 @@ class Profile extends React.Component {
       .catch(function(error) {
         console.log(error);
       });
-  }
-
+ }
   // componentDidMount() {
-  //   const self = this;
-  //   const auth0id = String(localStorage.getItem("profileAuthId"));
-  //   navigator.geolocation.getCurrentPosition(function(position) {
-  //     console.log(position.coords.longitude, position.coords.latitude);
-  //     axios
-  //       .put("/api/users/location", {
-  //         auth0id: auth0id,
-  //         location: {
-  //           coordinates: [position.coords.longitude, position.coords.latitude],
-  //           type: "Point"
-  //         }
-  //       })
-  //       .then(response => console.log("location updated"))
-  //       .catch(function(error) {
-  //         console.log(error);
-  //       });
-  //   });
+    // const self = this;
+    // const auth0id = localStorage.getItem("profileAuthId").replace(/['"]+/g, '');
+    // navigator.geolocation.getCurrentPosition(function(position) {
+    //   console.log(position.coords.longitude, position.coords.latitude);
+    //   axios
+    //     .put("/api/users/location/", {
+    //       auth0id: auth0id,
+    //       location: {
+    //         coordinates: [position.coords.longitude, position.coords.latitude],
+    //         type: "Point"
+    //       }
+    //     })
+    //     .then(response => console.log("location updated"))
+    //     .catch(function(error) {
+    //       console.log(error);
+    //     });
+    // });
+
+     
+  // {
+  //   "auth0id": "auth0|5a83907af5c8213cb27bc941",
+  //   "location": {
+  //       "type": "Point",
+  //             "coordinates": ["0", "0"]
+  //   }
+  // }
+
+
   // }
 
   handleFormSubmit = event => {
