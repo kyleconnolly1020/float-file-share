@@ -6,6 +6,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/floatusers");
 
 const userSeed = [
   {
+    "auth0id": "1",
     "username": "bharloe",
     "location": {
       "coordinates": [-117.184242, 32.853822],
@@ -19,6 +20,7 @@ const userSeed = [
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
   },
   {
+    "auth0id": "2",
     "username": "kyleconnolly",
     "location": {
       "coordinates": [-117.183268, 32.853431],
@@ -32,6 +34,7 @@ const userSeed = [
     "description": "Just a cool 2D dude"
   },
   {
+    "auth0id": "3",
     "username": "johnm",
     "location": {
       "coordinates": [-117.184637, 32.852760],
@@ -47,6 +50,7 @@ const userSeed = [
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
   },
   {
+    "auth0id": "4",
     "username": "kevin",
     "location": {
       "coordinates": [-117.188189, 32.854047],
@@ -61,6 +65,7 @@ const userSeed = [
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
   },
   {
+    "auth0id": "5",
     "username": "Clark",
     "location": {
       "coordinates": [-117.187062, 32.851830],
@@ -75,6 +80,7 @@ const userSeed = [
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
   },
   {
+    "auth0id": "6",
     "username": "TheTravMan",
     "location": {
       "coordinates": [-117.204316, 32.854476],
@@ -88,6 +94,7 @@ const userSeed = [
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
   },
   {
+    "auth0id": "7",
     "username": "David",
     "location": {
       "coordinates": [-117.234294, 32.849433],
@@ -101,6 +108,7 @@ const userSeed = [
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
   },
   {
+    "auth0id": "8",
     "username": "johnd",
     "location": {
       "coordinates": [-117.273001, 32.851099],

@@ -39,17 +39,28 @@ class App extends Component {
             console.log(error);
             return;
           }
-          /*
-          NEW USER API CALL HERE
-          */
-         console.log("made new user");
 
+          let newUser = {
+            auth0id: profile.sub,
+            username: profile.email
+          }
+
+          axios
+            .post("/api/users/new", newUser)
+            .then(response => {
+              localStorage.removeItem("justSignedUp");
+              history.push("/profile");
+              self.setState({
+                isAuthenticated: true
+              });
+              console.log("made new user");
+            })
+            .catch(function(error) {
+              console.log(error);
+            });
+      
         });
-        localStorage.removeItem("justSignedUp");
-        history.push("/profile");
-        self.setState({
-          isAuthenticated: true
-        });
+       
       } else {
         self.setState({
           isAuthenticated: true
