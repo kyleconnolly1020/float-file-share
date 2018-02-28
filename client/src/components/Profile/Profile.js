@@ -55,6 +55,7 @@ class Profile extends React.Component {
 
   componentWillMount() {
 
+    
     const auth0id = localStorage.getItem("profileAuthId").replace(/['"]+/g, '');
 
     axios
@@ -168,6 +169,7 @@ class Profile extends React.Component {
               onProfilePage={true}
               searchUsersUpdate={this.searchUsersUpdate}
               location="La Jolla, California"
+              lock={this.props.lock}
             />
 
             <UserBanner

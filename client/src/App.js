@@ -42,29 +42,50 @@ class App extends Component {
 
           let newUser = {
             auth0id: profile.sub,
-            username: profile.email
-          }
+            username: profile.email,
+            socialProfiles: {
+              facebook: null
+            },
+            image: null,
+            description: ""
+          };
 
           axios
             .post("/api/users/new", newUser)
             .then(response => {
               localStorage.removeItem("justSignedUp");
-              history.push("/profile");
-              self.setState({
-                isAuthenticated: true
+              lock.getUserInfo(authResult.accessToken, function(error, profile) {
+                if (error) {
+                  // Handle error
+                  return;
+                }
+                localStorage.setItem(
+                  "profileAuthId",
+                  JSON.stringify(profile.sub)
+                );
+                history.push("/profile");
+                self.setState({
+                  isAuthenticated: true
+                });
+                console.log("made new user");
               });
-              console.log("made new user");
             })
             .catch(function(error) {
               console.log(error);
             });
-      
         });
-       
       } else {
-        self.setState({
-          isAuthenticated: true
-        });
+        lock.getUserInfo(authResult.accessToken, function (error, profile) {
+          if (error) {
+              // Handle error
+              return;
+          }
+          localStorage.setItem("profileAuthId", JSON.stringify(profile.sub));
+          self.setState({
+            isAuthenticated: true
+          });
+      });
+        
       }
     });
 
