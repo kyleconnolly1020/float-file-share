@@ -21,30 +21,14 @@ class Home extends React.Component {
         
         //filter out current user
         userData.forEach(function(e) {
-            console.log("test");
-            console.log(e);
             if (e.auth0id === auth0id) {
                 userData.splice(e, 1)
             }
-            
         });
           
 
         this.setState({ users: userData });
         console.log(this.state.users);
-    }
-
-    componentWillMount() {
-        // const accessToken = localStorage.getItem("accessToken");
-        // const lock = this.props.lock
-
-        // lock.getUserInfo(accessToken, function (error, profile) {
-        //     if (error) {
-        //         // Handle error
-        //         return;
-        //     }
-        //     localStorage.setItem("profileAuthId", JSON.stringify(profile.sub));
-        // });
     }
 
     componentDidMount() {
