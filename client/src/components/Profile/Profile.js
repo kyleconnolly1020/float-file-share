@@ -29,15 +29,6 @@ const s3 = new AWS.S3({
   params: { Bucket: "floatfileshare" }
 });
 
-const postFile = fileData => {
-  axios
-    .post("/api/users/upload", fileData)
-    .then(response => console.log(response.data))
-    .catch(function(error) {
-      console.log(error);
-    });
-};
-
 const updateUser = (username, updateInfo) => {
   axios
     .put(`/api/users/update/${username}`, updateInfo)
@@ -54,57 +45,51 @@ class Profile extends React.Component {
   };
 
   componentWillMount() {
-
-    
-    const auth0id = localStorage.getItem("profileAuthId").replace(/['"]+/g, '');
+    const auth0id = localStorage.getItem("profileAuthId").replace(/['"]+/g, "");
 
     axios
       .get(`/api/users/username/${auth0id}`)
       .then(response => {
         const username = response.data[0].username;
         axios
-        .get(`/api/users/search/${username}`)
-        .then(response => {
-          this.setState({ user: response.data[0] });
-          console.log(this.state.user);
-        })
-        .catch(function(error) {
-          console.log(error);
-        });
+          .get(`/api/users/search/${username}`)
+          .then(response => {
+            this.setState({ user: response.data[0] });
+            console.log(this.state.user);
+          })
+          .catch(function(error) {
+            console.log(error);
+          });
       })
       .catch(function(error) {
         console.log(error);
       });
- }
-  // componentDidMount() {
-    // const self = this;
-    // const auth0id = localStorage.getItem("profileAuthId").replace(/['"]+/g, '');
-    // navigator.geolocation.getCurrentPosition(function(position) {
-    //   console.log(position.coords.longitude, position.coords.latitude);
-    //   axios
-    //     .put("/api/users/location/", {
-    //       auth0id: auth0id,
-    //       location: {
-    //         coordinates: [position.coords.longitude, position.coords.latitude],
-    //         type: "Point"
-    //       }
-    //     })
-    //     .then(response => console.log("location updated"))
-    //     .catch(function(error) {
-    //       console.log(error);
-    //     });
-    // });
-
-     
+  }
+  componentDidMount() {
+    const self = this;
+    const auth0id = localStorage.getItem("profileAuthId").replace(/['"]+/g, "");
+    navigator.geolocation.getCurrentPosition(function(position) {
+      console.log(position.coords.longitude, position.coords.latitude);
+      axios
+        .put("/api/users/location/", {
+          auth0id: auth0id,
+          location: {
+            coordinates: [position.coords.longitude, position.coords.latitude],
+            type: "Point"
+          }
+        })
+        .then(response => console.log("location updated"))
+        .catch(function(error) {
+          console.log(error);
+        });
+    });
+  }
   // {
   //   "auth0id": "auth0|5a83907af5c8213cb27bc941",
   //   "location": {
   //       "type": "Point",
   //             "coordinates": ["0", "0"]
   //   }
-  // }
-
-
   // }
 
   handleFormSubmit = event => {
@@ -122,16 +107,13 @@ class Profile extends React.Component {
   };
 
   uploadToS3 = userFile => {
-    // var files = document.getElementById('photoupload').files;
     if (!userFile) {
       return alert("Please choose a file to upload first.");
     }
-    // var file = userFile;
-    // var fileName = userFile.name;
     var uuid = uuidv4();
 
     var fileKey = uuid;
-    const self = this; 
+    const self = this;
 
     s3.upload(
       {
@@ -147,7 +129,7 @@ class Profile extends React.Component {
         alert("Successfully uploaded file");
         console.log(data);
         console.log(userFile);
-        postFile({
+        self.postFile({
           url: data.Location,
           filetype: userFile.type,
           filename: userFile.name,
@@ -156,6 +138,15 @@ class Profile extends React.Component {
         window.location.reload();
       }
     );
+  };
+
+  postFile = fileData => {
+    axios
+      .post("/api/users/upload", fileData)
+      // .then(response => )
+      .catch(function(error) {
+        console.log(error);
+      });
   };
 
   render() {
@@ -173,10 +164,10 @@ class Profile extends React.Component {
             />
 
             <UserBanner
-              updateUser = {this.updateUser}
-              handleFormSubmit = {this.handleFormSubmit}
-              handleInputChange = {this.handleInputChange}
-              open = {true}
+              updateUser={this.updateUser}
+              handleFormSubmit={this.handleFormSubmit}
+              handleInputChange={this.handleInputChange}
+              open={true}
               userName={this.state.user.username}
               // radius={`latitude: ${this.state.user.location.coordinates[0]} longitude: ${this.state.user.location.coordinates[1]}`}
               facebook={this.state.user.socialProfiles.facebook ? "true" : null}

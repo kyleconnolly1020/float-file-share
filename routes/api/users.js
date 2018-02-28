@@ -5,9 +5,11 @@ const usersController = require("../../controllers/usersController");
 router.route("/")
   .get(usersController.findAll)
   .post(usersController.create);
-
+  
 // Matches with "/api/users/:id"
-
+router.route("/location")
+  .put(usersController.updateLocation);  
+  
 router.route("/near")
   .post(usersController.findNear);
 
@@ -32,8 +34,5 @@ router.route("/update/:username")
 
 router.route("/new")
   .post(usersController.create);
-
-// router.route("/location")
-//   .put(usersController.updateLocation);  
 
 module.exports = router;
