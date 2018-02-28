@@ -82,18 +82,14 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
 
-  // updateLocation: function(req, res) {
-  //   console.log(req.body);
-
-  //   db.User.findOneAndUpdate({username: req.body.username}, { description: 'test' }).then(dbModel => res.json(dbModel))
-
-  //   db.User.findOneAndUpdate(
-  //     { "username": req.body.username },
-  //     {"description": req.body.description}
-  //   )
-  //     .then(dbModel => res.json(dbModel))
-  //     .catch(err => res.status(422).json(err));
-  // },
+  updateLocation: function(req, res) {
+    db.User.findOneAndUpdate(
+      { auth0id: req.body.auth0id },
+      { location: req.body.location}
+    )
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
 
   remove: function(req, res) {
     db.User.findById({ _id: req.params.id })
