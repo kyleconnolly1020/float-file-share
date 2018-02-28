@@ -16,16 +16,18 @@ class Home extends React.Component {
     }
 
     updateUsers = userData => {
-        //Working on filter to remove logged in
-        // let currentUserAuth = localStorage.getItem("profileAuthId");
-
-        // userData.forEach(function(e) {
-        //     console.log(e);
-        //     if (e.auth0id === currentUserAuth) {
-        //         userData.splice(e, 1)
-        //     }
+        
+        const auth0id = localStorage.getItem("profileAuthId").replace(/['"]+/g, "");
+        
+        //filter out current user
+        userData.forEach(function(e) {
+            console.log("test");
+            console.log(e);
+            if (e.auth0id === auth0id) {
+                userData.splice(e, 1)
+            }
             
-        // });
+        });
           
 
         this.setState({ users: userData });
