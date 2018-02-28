@@ -33,16 +33,16 @@ class Home extends React.Component {
     }
 
     componentWillMount() {
-        const accessToken = localStorage.getItem("accessToken");
-        const lock = this.props.lock
+        // const accessToken = localStorage.getItem("accessToken");
+        // const lock = this.props.lock
 
-        lock.getUserInfo(accessToken, function (error, profile) {
-            if (error) {
-                // Handle error
-                return;
-            }
-            localStorage.setItem("profileAuthId", JSON.stringify(profile.sub));
-        });
+        // lock.getUserInfo(accessToken, function (error, profile) {
+        //     if (error) {
+        //         // Handle error
+        //         return;
+        //     }
+        //     localStorage.setItem("profileAuthId", JSON.stringify(profile.sub));
+        // });
     }
 
     componentDidMount() {
