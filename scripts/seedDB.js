@@ -19,7 +19,7 @@ const userSeed = [
     "description": "I am a web developer in training! Check out my LinkedIn, resume, or say hi on Facebook"
   },
   {
-    "auth0id": "2",
+    "auth0id": "auth0|5a8ddfbe5c679b178110893b",
     "username": "kyleconnolly",
     "location": {
       "coordinates": [-117.183268, 32.853431],
@@ -46,7 +46,7 @@ const userSeed = [
       "javascript": "javascript_url"
     },
     "image": "https://image.flaticon.com/icons/svg/163/163814.svg",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
+    "description": "My name is John and I'm a fullstack engineer!"
   },
   {
     "auth0id": "4",
@@ -61,7 +61,7 @@ const userSeed = [
       "linkedin": "kevinsemo"
     },
     "image": "https://image.flaticon.com/icons/svg/163/163804.svg",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
+    "description": "Wassup I'm Kevin!"
   },
   {
     "auth0id": "5",
@@ -76,7 +76,7 @@ const userSeed = [
       "twitter": "twitter.com/clarkphan"
     },
     "image": "https://image.flaticon.com/icons/svg/163/163801.svg",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
+    "description": "Hello! I'm a rising sophomore studying math and computer science at the University of Calfiornia, San Diego"
   },
   {
     "auth0id": "6",
@@ -90,7 +90,7 @@ const userSeed = [
       "linkedin": "Travis"
     },
     "image": "https://image.flaticon.com/icons/svg/163/163827.svg",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
+    "description": "I'm TheTravMan! Wassup!"
   },
   {
     "auth0id": "7",
@@ -104,7 +104,7 @@ const userSeed = [
       "linkedin": "David"
     },
     "image": "https://image.flaticon.com/icons/svg/145/145859.svg",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
+    "description": "My name is David and I've got a cool beard!"
   },
   {
     "auth0id": "8",
@@ -118,7 +118,7 @@ const userSeed = [
       "linkedin": "johnd"
     },
     "image": "https://image.flaticon.com/icons/svg/163/163834.svg",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim feugiat sodales. Donec finibus urna eget lobortis aliquam. Nunc elementum sollicitudin sagittis."
+    "description": "Get your head out of the exercise!"
   }
 ];
 

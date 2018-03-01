@@ -38,6 +38,7 @@ class UserBanner extends React.Component {
         axios.put(`/api/users/update/${username}`, updateInfo)
             .then(response => {
                 console.log(response.data)
+                window.location.reload();
             })
             .catch(error => console.log(error))
     }
@@ -47,7 +48,28 @@ class UserBanner extends React.Component {
         const value = event.target.value;
         const name = event.target.name;
         this.setState({
-            [name]: value
+            ...this.state,
+            edits : true,
+            updates: {
+                ...this.state.updates,
+                socialProfiles: {
+                    ...this.state.updates.socialProfiles,
+                    [name]: value
+                }
+            }
+        });
+    };
+
+    updateDescription = event => {
+        this.setState({ edits: true });
+        const value = event.target.value;
+        this.setState({
+            ...this.state,
+            edits : true,
+            updates: {
+                ...this.state.updates,
+                description : value
+            }
         });
     };
 
@@ -100,12 +122,12 @@ class UserBanner extends React.Component {
                         <Panel.Body> 
                             <div className="row">
                                 <div className="col-md-6">
-                                    {this.state.editing ? (<input type="text" name="updates.description" defaultValue={this.props.description} onChange={this.updateUserFields} />) : (<p><strong>{this.props.description}</strong></p>)}
-                                    {this.state.editing ? (<p className="facebook"><span><i className='fab fa-facebook-square'></i> </span><input type="text" name="updates.socialProfiles.facebook" defaultValue="facebook.com/" onChange={this.updateUserFields} /></p>) : (this.props.userSocials.facebook ? (<p className="facebook"><span><i className='fab fa-facebook-square'></i></span><a href={this.props.userSocials.facebook} target="_blank">{'  ' + this.props.userSocials.facebook}</a></p>) : null)}
-                                    {this.state.editing ? (<p className="twitter"><span><i className='fab fa-twitter'></i> </span><input type="text" name="updates.socialProfiles.twitter" defaultValue="twitter.com/" onChange={this.updateUserFields} /></p>) : (this.props.userSocials.twitter ? (<p className="twitter"><span><i className='fab fa-twitter'></i></span><a href={this.props.userSocials.twitter} target="_blank">{'  ' + this.props.userSocials.twitter}</a></p>) : null)}
-                                    {this.state.editing ? (<p className="snapchat"><span><i className='fab fa-snapchat-ghost'></i> </span><input type="text" name="updates.socialProfiles.snapchat" defaultValue={this.props.userSocials.snapchat} onChange={this.updateUserFields} /></p>) : (this.props.userSocials.snapchat ? (<p className="snapchat"><span><i className='fab fa-snapchat-ghost'></i></span><a href={this.props.userSocials.snapchat} target="_blank">{'  ' + this.props.userSocials.snapchat}</a></p>) : null)}
-                                    {this.state.editing ? (<p className="linkedin"><span><i className='fab fa-linkedin'></i> </span><input type="text" name="updates.socialProfiles.linkedin" defaultValue="linkedin.com/" onChange={this.updateUserFields} /></p>) : (this.props.userSocials.linkedin ? (<p className="linkedin"><span><i className='fab fa-linkedin'></i></span><a href={this.props.userSocials.linkedin} target="_blank">{'  ' + this.props.userSocials.linkedin}</a></p>) : null)}
-                                    {this.state.editing ? (<p className="instagram"><span><i className='fab fa-instagram'></i> </span><input type="text" name="updates.socialProfiles.instagram" defaultValue={this.props.userSocials.instagram} onChange={this.updateUserFields} /></p>) : (this.props.userSocials.instagram ? (<p className="instagram"><span><i className='fab fa-instagram'></i></span><a href={this.props.userSocials.instagram} target="_blank">{'  ' + this.props.userSocials.instagram}</a></p>) : null)}
+                                    {this.state.editing ? (<input type="text" name="description" defaultValue={this.props.description} onChange={this.updateDescription} />) : (<p><strong>{this.props.description}</strong></p>)}
+                                    {this.state.editing ? (<p className="facebook"><span><i className='fab fa-facebook-square'></i> </span><input type="text" name="facebook" defaultValue="facebook.com/" onChange={this.updateUserFields} /></p>) : (this.props.userSocials.facebook ? (<p className="facebook"><span><i className='fab fa-facebook-square'></i></span><a href={this.props.userSocials.facebook} target="_blank">{'  ' + this.props.userSocials.facebook}</a></p>) : null)}
+                                    {this.state.editing ? (<p className="twitter"><span><i className='fab fa-twitter'></i> </span><input type="text" name="twitter" defaultValue="twitter.com/" onChange={this.updateUserFields} /></p>) : (this.props.userSocials.twitter ? (<p className="twitter"><span><i className='fab fa-twitter'></i></span><a href={this.props.userSocials.twitter} target="_blank">{'  ' + this.props.userSocials.twitter}</a></p>) : null)}
+                                    {this.state.editing ? (<p className="snapchat"><span><i className='fab fa-snapchat-ghost'></i> </span><input type="text" name="snapchat" defaultValue={this.props.userSocials.snapchat} onChange={this.updateUserFields} /></p>) : (this.props.userSocials.snapchat ? (<p className="snapchat"><span><i className='fab fa-snapchat-ghost'></i></span><a href={this.props.userSocials.snapchat} target="_blank">{'  ' + this.props.userSocials.snapchat}</a></p>) : null)}
+                                    {this.state.editing ? (<p className="linkedin"><span><i className='fab fa-linkedin'></i> </span><input type="text" name="linkedin" defaultValue="linkedin.com/" onChange={this.updateUserFields} /></p>) : (this.props.userSocials.linkedin ? (<p className="linkedin"><span><i className='fab fa-linkedin'></i></span><a href={this.props.userSocials.linkedin} target="_blank">{'  ' + this.props.userSocials.linkedin}</a></p>) : null)}
+                                    {this.state.editing ? (<p className="instagram"><span><i className='fab fa-instagram'></i> </span><input type="text" name="instagram" defaultValue={this.props.userSocials.instagram} onChange={this.updateUserFields} /></p>) : (this.props.userSocials.instagram ? (<p className="instagram"><span><i className='fab fa-instagram'></i></span><a href={this.props.userSocials.instagram} target="_blank">{'  ' + this.props.userSocials.instagram}</a></p>) : null)}
                                 </div>
                                 <div className="col-md-6">
                                     {this.props.userFiles.map(file => {
