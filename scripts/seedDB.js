@@ -15,7 +15,7 @@ const userSeed = [
     "socialProfiles": {
       "linkedin": "https://www.linkedin.com/in/benharloe/"
     },
-    "image": "https://image.flaticon.com/icons/svg/163/163801.svg",
+    "image": "https://s3.amazonaws.com/floatfileshare/16508795_10210998047894714_9072515251964865789_n.jpg",
     "description": "I am a web developer in training! Check out my LinkedIn, resume, or say hi on Facebook"
   },
   {

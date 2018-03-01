@@ -19,7 +19,7 @@ class NavBar extends React.Component {
                     ? null 
                     : <Search searchUsersUpdate = {this.props.searchUsersUpdate}/>
                 }
-                <span className="location">{this.props.location}</span>
+                <span className="location hideOnMobile">{this.props.location}</span>
 
                 <span className="icons navbar-brand navbar-right">
                     <Link to={this.props.onProfilePage ? '/' : '/profile'}>

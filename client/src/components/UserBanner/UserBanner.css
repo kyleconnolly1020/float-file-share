@@ -72,3 +72,9 @@ a:hover {
 #submitButton {
     margin-left: 110px;
 }
+
+@media only screen and (min-device-width : 0px) and (max-device-width : 480px) {
+    .hideOnMobile {
+        display: none
+    }
+  }
