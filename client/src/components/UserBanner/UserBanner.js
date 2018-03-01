@@ -79,7 +79,9 @@ class UserBanner extends React.Component {
                     <div className="container userBanner">
                         <UserProfile action={() => this.handler()} image={this.props.image ? this.props.image : "https://s3.amazonaws.com/floatfileshare/default-user-image.png"} />
                         <div className="userName">{this.props.userName}</div>
-                        <div className="radius">{this.props.radius}</div>
+                        <div className="radius hideOnMobile">{this.props.radius}</div>
+
+                        <div className="hideOnMobile">
                         <SocialMediaBar
                             facebook={this.props.facebook}
                             twitter={this.props.twitter}
@@ -91,9 +93,11 @@ class UserBanner extends React.Component {
                             javascript={this.props.javascript}
                             imagefile={this.props.imagefile}
                         />
+                        </div>
+                        
                     </div>
                     <Panel.Collapse>
-                        <Panel.Body>
+                        <Panel.Body> 
                             <div className="row">
                                 <div className="col-md-6">
                                     {this.state.editing ? (<input type="text" name="updates.description" defaultValue={this.props.description} onChange={this.updateUserFields} />) : (<p><strong>{this.props.description}</strong></p>)}
@@ -129,7 +133,7 @@ class UserBanner extends React.Component {
                                         </div>
                                         <HelpBlock>Select a file you would like to upload</HelpBlock>
                                     </FormGroup>
-                                    <Button id="submitButton" type="submit">Submit</Button>
+                                    <Button id="submitButton" type="submit">Submit File</Button>
                                     <Button style={{ float: "right" }} onClick={this.formSwitch}>Update Profile</Button>
                                 </form>
                             }

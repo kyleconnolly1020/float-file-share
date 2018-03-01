@@ -60,7 +60,7 @@ class Home extends React.Component {
                             return (
                                 <UserBanner
                                     userName={user.username}
-                                    radius={`latitude: ${user.location.coordinates[0]} longitude: ${user.location.coordinates[1]}`}
+                                    radius={`latitude: ${user.location.coordinates[0]} \n longitude: ${user.location.coordinates[1]}`}
                                     facebook={user.socialProfiles.facebook ? "true" : null}
                                     twitter={user.socialProfiles.twitter ? "true" : null}
                                     snapchat={user.socialProfiles.snapchat ? "true" : null}
