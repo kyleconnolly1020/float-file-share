@@ -19,7 +19,7 @@ const userSeed = [
     "description": "I am a web developer in training! Check out my LinkedIn, resume, or say hi on Facebook"
   },
   {
-    "auth0id": "2",
+    "auth0id": "auth0|5a8ddfbe5c679b178110893b",
     "username": "kyleconnolly",
     "location": {
       "coordinates": [-117.183268, 32.853431],
