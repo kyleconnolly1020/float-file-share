@@ -53,7 +53,7 @@ class Home extends React.Component {
                     <div className="appWindow">
                         <NavBar
                             searchUsersUpdate={this.searchUsersUpdate}
-                            location="La Jolla, California"
+                            location="San Diego, California"
                             lock={this.props.lock}
                         />
                         {this.state.users.map(user => {
