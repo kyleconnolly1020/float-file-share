@@ -29,7 +29,7 @@ const userSeed = [
       "facebook": "facebook.com/kyle",
       "instagram": "kyle"
     },
-    "image": "https://image.flaticon.com/icons/svg/163/163837.svg",
+    "image": "https://floatfileshare.s3.amazonaws.com/8e6cf855-ebde-4906-b970-3d9e0898b897",
     "description": "Just a cool 2D dude"
   },
   {
@@ -64,7 +64,7 @@ const userSeed = [
     "description": "Wassup I'm Kevin!"
   },
   {
-    "auth0id": "5",
+    "auth0id": "auth0|5a9883dd5edad629808aee2d",
     "username": "Clark",
     "location": {
       "coordinates": [-117.187062, 32.851830],
@@ -75,7 +75,7 @@ const userSeed = [
       "linkedin": "clarkphan",
       "twitter": "twitter.com/clarkphan"
     },
-    "image": "https://image.flaticon.com/icons/svg/163/163801.svg",
+    "image": "https://floatfileshare.s3.amazonaws.com/48a39b70-4ce7-44d1-8f98-eeab9460db7c",
     "description": "Hello! I'm a rising sophomore studying math and computer science at the University of Calfiornia, San Diego"
   },
   {
