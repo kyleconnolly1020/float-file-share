@@ -58,5 +58,4 @@ App is deployed on [Heroku](https://float-file-share.herokuapp.com/).
 * Kyle Connolly
 * John Mai
 
-## Acknowledgment 
-This code was created for the final project of the Trilogy Coding Bootcamp at UCSD Extension.
+
